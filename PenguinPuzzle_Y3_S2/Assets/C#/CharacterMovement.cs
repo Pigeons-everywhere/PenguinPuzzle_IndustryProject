@@ -1,3 +1,4 @@
+//character movement + gravity
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +13,14 @@ public class CharacterMovement : MonoBehaviour
     private CharacterController controller;
     private PlayerInputActions inputActions;
     private InputAction moveAction;
+    private InputAction hoverAction;
+
+    //gravity variabe
+    float gravity = 1f;
+    float vSpeed = 0f; //vertical speed
+
+    //hovering speed
+    public float hovSpeed = 0.5f;
 
     void Start()
     {
@@ -20,6 +29,7 @@ public class CharacterMovement : MonoBehaviour
         inputActions = new PlayerInputActions();
 
         moveAction = inputActions.Player.Move;
+        hoverAction = inputActions.Player.Hover;
 
         inputActions.Enable();
     }
@@ -28,6 +38,8 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         Vector2 inputValue = moveAction.ReadValue<Vector2>();
+
+        float hovering = hoverAction.ReadValue<float>();//is or is not hovering
 
         Vector3 cameraForward = cameraTransform.forward;
         Vector3 cameraRight = cameraTransform.right;
@@ -45,5 +57,23 @@ public class CharacterMovement : MonoBehaviour
         Vector3 moveDelta = moveDirection * moveSpeed * Time.deltaTime;
 
         controller.Move(moveDelta);
+        
+        //gravity
+        if (!controller.isGrounded) {
+            vSpeed -= gravity * Time.deltaTime;
+            if (hovering > 0)
+            {
+                vSpeed = -hovSpeed*Time.deltaTime;
+            } 
+        }
+        else {
+            vSpeed = 0;
+        }
+        
+
+        Vector3 vVel = new Vector3(0f,1f * (vSpeed),0f); //vertical velocity
+
+        controller.Move(vVel);
+
     }
 }
