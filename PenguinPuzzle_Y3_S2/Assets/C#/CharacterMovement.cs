@@ -1,4 +1,4 @@
-//character movement + gravity
+//old character movement + gravity
 using UnityEngine;
 using UnityEngine.InputSystem;
 

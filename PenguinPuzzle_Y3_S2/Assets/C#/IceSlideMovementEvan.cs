@@ -1,3 +1,6 @@
+//ice slide and hover
+
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,6 +22,12 @@ public class IceSlideMovementEvan : MonoBehaviour
 
     private bool startSlide = false;
 
+    //hovering
+    [SerializeField] bool isGrounded = true;
+    private InputAction hoverAction;
+    public float hoverSpeed = 5;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -26,6 +35,7 @@ public class IceSlideMovementEvan : MonoBehaviour
         inputActions = new PlayerInputActions();
 
         moveAction = inputActions.Player.Move;
+        hoverAction = inputActions.Player.Hover;
 
         inputActions.Enable();
     }
@@ -63,7 +73,20 @@ public class IceSlideMovementEvan : MonoBehaviour
         Quaternion turn = Quaternion.Euler(0f, rotation, 0f);
 
         rb.MoveRotation(rb.rotation * turn);
+
+        if (!isGrounded){
+            if (hoverAction.ReadValue<float>() > 0) rb.linearDamping = hoverSpeed;
+            else rb.linearDamping = 0;
+        }
         
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Ground") isGrounded = true;
+    }
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Ground") isGrounded = false;
     }
 }
 
