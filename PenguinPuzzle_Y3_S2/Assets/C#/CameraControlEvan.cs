@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CameraControl : MonoBehaviour
+public class CameraControlEvan : MonoBehaviour
 {
     public Transform target;
     public Vector3 targetOffset;
