@@ -1,10 +1,10 @@
-//ice slide and hover
+//ice slide and hover Evan & Terry
 
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class IceSlideMovementEvan : MonoBehaviour
+public class IceSlideMovement : MonoBehaviour
 {
   
     [SerializeField]

@@ -1,4 +1,5 @@
-//old character movement + gravity
+//old character movement + gravity Evan & Terry
+//Maybe used to switch movement
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,22 +10,23 @@ public class CharacterMovement : MonoBehaviour
     public float moveSpeed = 5f;
 
     public Transform cameraTransform;
-
-    private CharacterController controller;
+    private Rigidbody rb;
+    //private CharacterController controller;
     private PlayerInputActions inputActions;
     private InputAction moveAction;
     private InputAction hoverAction;
 
     //gravity variabe
-    float gravity = 1f;
-    float vSpeed = 0f; //vertical speed
+    //float gravity = 1f;
+    //float vSpeed = 0f; //vertical speed
 
     //hovering speed
     public float hovSpeed = 0.5f;
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        //controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
 
         inputActions = new PlayerInputActions();
 
@@ -35,9 +37,10 @@ public class CharacterMovement : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         Vector2 inputValue = moveAction.ReadValue<Vector2>();
+
 
         float hovering = hoverAction.ReadValue<float>();//is or is not hovering
 
@@ -54,11 +57,17 @@ public class CharacterMovement : MonoBehaviour
             moveDirection.Normalize();
         }
 
-        Vector3 moveDelta = moveDirection * moveSpeed * Time.deltaTime;
+        Vector3 penguinVelocity = moveDirection * moveSpeed;
 
-        controller.Move(moveDelta);
-        
-        //gravity
+        penguinVelocity.y = rb.linearVelocity.y;
+
+        rb.linearVelocity = penguinVelocity;
+        //Vector3 moveDelta = moveDirection * moveSpeed * Time.deltaTime;
+
+        //controller.Move(moveDelta);
+
+        /*
+         //gravity
         if (!controller.isGrounded) {
             vSpeed -= gravity * Time.deltaTime;
             if (hovering > 0)
@@ -71,9 +80,11 @@ public class CharacterMovement : MonoBehaviour
         }
         
 
+
         Vector3 vVel = new Vector3(0f,1f * (vSpeed),0f); //vertical velocity
 
         controller.Move(vVel);
+        */
 
     }
 }
