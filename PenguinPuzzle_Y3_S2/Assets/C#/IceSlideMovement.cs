@@ -20,7 +20,7 @@ public class IceSlideMovement : MonoBehaviour
     private PlayerInputActions inputActions;
     private InputAction moveAction;
 
-    private bool startSlide = false;
+    public bool startSlide = false;
 
     //hovering
     [SerializeField] bool isGrounded = true;
