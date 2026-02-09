@@ -75,8 +75,12 @@ public class IceSlideMovement : MonoBehaviour
         rb.MoveRotation(rb.rotation * turn);
 
         if (!isGrounded){
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             if (hoverAction.ReadValue<float>() > 0) rb.linearDamping = hoverSpeed;
             else rb.linearDamping = 0;
+        }
+        else{
+            rb.constraints = RigidbodyConstraints.None;
         }
         
     }
