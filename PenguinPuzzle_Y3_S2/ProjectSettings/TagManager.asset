@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Penguin
   - Ladder
+  - Spike
+  - Key
+  - Door
   layers:
   - Default
   - TransparentFX
