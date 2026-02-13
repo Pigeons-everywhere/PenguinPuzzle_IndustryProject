@@ -68,7 +68,7 @@ public class ClimbLadders : MonoBehaviour
         isClimbing = false;
         rb.useGravity = true;
         rb.linearVelocity = Vector3.zero;
-        rb.constraints = RigidbodyConstraints.FreezeRotation;
+        rb.constraints = RigidbodyConstraints.None;
         normalMovement.enabled = true;
     }
 }

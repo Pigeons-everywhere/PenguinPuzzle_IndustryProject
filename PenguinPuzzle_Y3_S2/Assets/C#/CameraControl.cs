@@ -17,15 +17,23 @@ public class CameraControl : MonoBehaviour
     private PlayerInputActions inputActions;
     private InputAction rotateAction;
 
-    void Start()
+    private void Awake()
     {
         inputActions = new PlayerInputActions();
 
         rotateAction = inputActions.Player.RotateCamera;
 
+        
+    }
+    private void OnEnable()
+    {
         inputActions.Enable();
 
         yAngle = transform.eulerAngles.y;
+    }
+    private void OnDisable()
+    {
+        inputActions.Disable();
     }
 
     void LateUpdate()
