@@ -7,6 +7,16 @@ public class SpikeBehaviour: MonoBehaviour
 
     [SerializeField] IceSlideMovement penguinMoves;
 
+    
+    [SerializeField] GameObject[] keys = null;
+    [SerializeField] GameObject[] doors = null;
+    public GameObject keyIcon;
+
+    private void Start(){
+        keys = GameObject.FindGameObjectsWithTag("Key");
+        doors =  GameObject.FindGameObjectsWithTag("Door");
+    }
+
     private void OnCollisionEnter(Collision col){
         if (col.gameObject.tag == "Penguin"){
 
@@ -18,6 +28,15 @@ public class SpikeBehaviour: MonoBehaviour
             col.rigidbody.angularVelocity = new Vector3(0f,0f,0f);
             col.rigidbody.position = starterPosition;
             col.rigidbody.rotation = Quaternion.Euler(starterRotation.x,starterRotation.y,starterRotation.z);
+
+            foreach(GameObject keyO in keys){
+                keyO.SetActive(true);
+            }
+            foreach(GameObject doorO in doors){
+                doorO.SetActive(true);
+            }
+            keyIcon.SetActive(false);
+        
         }
     }
     

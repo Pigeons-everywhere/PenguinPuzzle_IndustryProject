@@ -19,7 +19,7 @@ public class KeyBehaviour : MonoBehaviour
         {
             gm.hasKey = true;
             keyIcon.SetActive(true);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
