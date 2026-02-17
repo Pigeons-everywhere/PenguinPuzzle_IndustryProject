@@ -12,9 +12,13 @@ public class SpikeBehaviour: MonoBehaviour
     [SerializeField] GameObject[] doors = null;
     public GameObject keyIcon;
 
+    public GameObject[] platforms;
+    [SerializeField] Animator platformAnims;
+
     private void Start(){
         keys = GameObject.FindGameObjectsWithTag("Key");
         doors =  GameObject.FindGameObjectsWithTag("Door");
+        platforms = GameObject.FindGameObjectsWithTag("MovingObject");
     }
 
     private void OnCollisionEnter(Collision col){
@@ -36,7 +40,13 @@ public class SpikeBehaviour: MonoBehaviour
                 doorO.SetActive(true);
             }
             keyIcon.SetActive(false);
-        
+
+            foreach(GameObject movingObject in platforms)
+            {
+                platformAnims = movingObject.GetComponent<Animator>();
+                platformAnims.Play("MovingPlatform",-1,0);
+                platformAnims.speed = 0f;
+            }
         }
     }
     
