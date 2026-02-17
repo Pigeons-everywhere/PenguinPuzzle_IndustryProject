@@ -5,6 +5,7 @@ public class TelescopeSwitch : MonoBehaviour
 {
     public GameObject cameraObject;
     public GameObject telescopeCameraObject;
+    public GameObject telescopeShadowUI;
 
     private bool canUseTelescope = false;
     private bool usingTelescope;
@@ -41,6 +42,7 @@ public class TelescopeSwitch : MonoBehaviour
 
         cameraObject.SetActive(!usingTelescope);
         telescopeCameraObject.SetActive(usingTelescope);
+        telescopeShadowUI.SetActive(usingTelescope);
     }
 
     private void OnTriggerEnter(Collider other)
