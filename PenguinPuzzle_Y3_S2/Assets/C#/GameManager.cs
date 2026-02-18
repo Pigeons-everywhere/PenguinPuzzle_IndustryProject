@@ -6,6 +6,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public bool hasKey = false;
+    public int lastLevelCompleted = 0;
+    public string highestLevelReached = "MainMenu";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
