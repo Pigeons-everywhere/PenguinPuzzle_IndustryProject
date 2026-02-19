@@ -30,7 +30,7 @@ public class SpikeBehaviour: MonoBehaviour
 
             penguinMoves = col.gameObject.GetComponent<CharacterMovement>();
 
-            penguinMoves.startSlide = false;
+            //penguinMoves.startSlide = false;
 
             col.rigidbody.linearVelocity = new Vector3(0f,0f,0f);
             col.rigidbody.angularVelocity = new Vector3(0f,0f,0f);

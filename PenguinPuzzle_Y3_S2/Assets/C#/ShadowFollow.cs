@@ -11,7 +11,7 @@ public class ShadowFollow : MonoBehaviour
     {
         Vector3 rayStart = penguin.position + Vector3.up * 1f;
 
-        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hitInfo,5f,groundlayer))
+        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hitInfo,2f,groundlayer))
         {
             transform.position = hitInfo.point + Vector3.up * groundOffset;
         }
