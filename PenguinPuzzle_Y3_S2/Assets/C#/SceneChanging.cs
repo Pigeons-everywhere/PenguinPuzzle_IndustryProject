@@ -12,6 +12,9 @@ public class SceneChanging : MonoBehaviour
     GameObject censorBar;
     private int sceneToGoTo;
 
+    //starting/respawn positions of levels
+    List<Vector3> respawns = new List<Vector3> {new Vector3(4f,11f,0f), new Vector3(0f,5f,0f)};
+
     private void Start() {
         gameManagerObj = GameObject.Find("GameManager");
         gMan = gameManagerObj.GetComponent<GameManager>();
@@ -47,6 +50,7 @@ public class SceneChanging : MonoBehaviour
         {
             sceneToGoTo = Int32.Parse(gameObject.name);
             gMan.lastLevelCompleted = sceneToGoTo;
+            if (sceneToGoTo!= 0) gMan.respawnPoint = respawns[sceneToGoTo-1];
             SceneManager.LoadScene(scenes[sceneToGoTo]);
         }
     }

@@ -12,6 +12,8 @@ public class IceSlideMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float turnSpeed = 25f;
 
+    public Transform cameraTransform;
+
     //Max Speed
     public float maxSpeed = 5f;
 
@@ -91,6 +93,33 @@ public class IceSlideMovement : MonoBehaviour
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.tag == "Ground") isGrounded = false;
+    }
+
+    void normalWalk()
+    {
+        Vector2 inputValue = moveAction.ReadValue<Vector2>();
+
+
+        float hovering = hoverAction.ReadValue<float>();//is or is not hovering
+
+        Vector3 cameraForward = cameraTransform.forward;
+        Vector3 cameraRight = cameraTransform.right;
+
+        cameraForward.y = 0f;
+        cameraRight.y = 0f;
+
+        Vector3 moveDirection = cameraForward * inputValue.y + cameraRight * inputValue.x;
+
+        if (moveDirection.sqrMagnitude > 1f)
+        {
+            moveDirection.Normalize();
+        }
+
+        Vector3 penguinVelocity = moveDirection * moveSpeed;
+
+        penguinVelocity.y = rb.linearVelocity.y;
+
+        rb.linearVelocity = penguinVelocity;
     }
 }
 

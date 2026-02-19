@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class SpikeBehaviour: MonoBehaviour
 {
-    public Vector3 starterPosition = new Vector3(-13f,1f,-6.5f);
+    public Vector3 starterPosition;
+    GameObject gameManagerObj;
+    GameManager gMan;
     public Vector3 starterRotation = new Vector3(0f,90f,0f);
 
-    [SerializeField] IceSlideMovement penguinMoves;
+    [SerializeField] CharacterMovement penguinMoves;
 
     
     [SerializeField] GameObject[] keys = null;
@@ -19,12 +21,14 @@ public class SpikeBehaviour: MonoBehaviour
         keys = GameObject.FindGameObjectsWithTag("Key");
         doors =  GameObject.FindGameObjectsWithTag("Door");
         platforms = GameObject.FindGameObjectsWithTag("MovingObject");
+        gameManagerObj = GameObject.Find("GameManager");
+        starterPosition = gameManagerObj.GetComponent<GameManager>().respawnPoint;
     }
 
     private void OnCollisionEnter(Collision col){
         if (col.gameObject.tag == "Penguin"){
 
-            penguinMoves = col.gameObject.GetComponent<IceSlideMovement>();
+            penguinMoves = col.gameObject.GetComponent<CharacterMovement>();
 
             penguinMoves.startSlide = false;
 
