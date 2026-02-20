@@ -206,9 +206,10 @@ public class CharacterMovement : MonoBehaviour
 
         Vector3 moveDirection = cameraForward * inputValue.y + cameraRight * inputValue.x;
 
-        if (moveDirection.sqrMagnitude > 1f)
+        if (moveDirection.sqrMagnitude > 0.1f)
         {
             moveDirection.Normalize();
+            transform.rotation = Quaternion.LookRotation(moveDirection);
         }
 
         Vector3 penguinVelocity = moveDirection * moveSpeed;

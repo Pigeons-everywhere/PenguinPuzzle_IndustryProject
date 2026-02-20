@@ -622,6 +622,7 @@ MonoBehaviour:
   hasKey: 0
   lastLevelCompleted: 0
   highestLevelReached: MainMenu
+  respawnPoint: {x: 4, y: 11, z: 0}
 --- !u!4 &2052435981
 Transform:
   m_ObjectHideFlags: 0

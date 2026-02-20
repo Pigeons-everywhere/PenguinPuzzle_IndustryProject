@@ -15,5 +15,6 @@ public class ShadowFollow : MonoBehaviour
         {
             transform.position = hitInfo.point + Vector3.up * groundOffset;
         }
+        transform.rotation = Quaternion.Euler(90f, 0f, 0f);
     }
 }

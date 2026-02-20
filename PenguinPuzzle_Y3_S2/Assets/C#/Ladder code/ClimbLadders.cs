@@ -43,9 +43,9 @@ public class ClimbLadders : MonoBehaviour
         rb.useGravity = false;
         rb.linearVelocity = Vector3.zero;
 
-        rb.constraints = RigidbodyConstraints.FreezeRotation |
-                         RigidbodyConstraints.FreezePositionX |
-                         RigidbodyConstraints.FreezePositionZ;
+       // rb.constraints = RigidbodyConstraints.FreezeRotation |
+                         //RigidbodyConstraints.FreezePositionX |
+                         //RigidbodyConstraints.FreezePositionZ;
     }
     
     private void OnTriggerExit(Collider other) //Now for leave ladder at top
@@ -68,7 +68,7 @@ public class ClimbLadders : MonoBehaviour
         isClimbing = false;
         rb.useGravity = true;
         rb.linearVelocity = Vector3.zero;
-        rb.constraints = RigidbodyConstraints.None;
+        //rb.constraints = RigidbodyConstraints.None;
         normalMovement.enabled = true;
     }
 }

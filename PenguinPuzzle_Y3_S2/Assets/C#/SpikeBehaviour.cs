@@ -22,7 +22,7 @@ public class SpikeBehaviour: MonoBehaviour
         doors =  GameObject.FindGameObjectsWithTag("Door");
         platforms = GameObject.FindGameObjectsWithTag("MovingObject");
         gameManagerObj = GameObject.Find("GameManager");
-        starterPosition = gameManagerObj.GetComponent<GameManager>().respawnPoint;
+        //starterPosition = gameManagerObj.GetComponent<GameManager>().respawnPoint;
     }
 
     private void OnCollisionEnter(Collision col){
