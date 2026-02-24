@@ -173,6 +173,7 @@ public class CharacterMovement : MonoBehaviour
     private PlayerInputActions inputActions;
     private InputAction moveAction;
     private InputAction hoverAction;
+    private Animator anim;
 
 
     //hovering speed
@@ -184,6 +185,7 @@ public class CharacterMovement : MonoBehaviour
     {
         //controller = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
 
         inputActions = new PlayerInputActions();
 
@@ -217,6 +219,8 @@ public class CharacterMovement : MonoBehaviour
         penguinVelocity.y = rb.linearVelocity.y;
 
         rb.linearVelocity = penguinVelocity;
+
+        anim.SetTrigger("Walk");
 
         if (!isGrounded)
         {
