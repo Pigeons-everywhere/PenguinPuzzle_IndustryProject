@@ -889,8 +889,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: PenguinPuzzle_Y3_S2
-  metroPackageVersion: 
+  metroPackageName: PenguinPuzzleY3S2
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -898,7 +898,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: PenguinPuzzle_Y3_S2
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: PenguinPuzzle_Y3_S2
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
