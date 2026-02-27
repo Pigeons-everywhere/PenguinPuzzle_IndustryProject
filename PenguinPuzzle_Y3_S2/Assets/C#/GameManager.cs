@@ -2,6 +2,7 @@
 //like current level finished, highest level finished, puzzle stuff
 
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,13 @@ public class GameManager : MonoBehaviour
     public int lastLevelCompleted = 0;
     public string highestLevelReached = "MainMenu";
 
-    public GameObject[] clothes;
+    public List<string> clothes;
+    public List<string> trophies;
+    public float fish = 0f;
+
+    public List<string> wearing;
+
+    public int doneOrNot = 0;
 
     public Vector3 respawnPoint = new Vector3(4f,11f,0f);
 
