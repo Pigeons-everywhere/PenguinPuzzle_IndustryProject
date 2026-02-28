@@ -196,8 +196,18 @@ public class IceSlideMovement : MonoBehaviour
         if (!isGrounded)
         {
             //rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-            if (hoverAction.ReadValue<float>() > 0) rb.linearDamping = hoverSpeed;
-            else rb.linearDamping = 0;
+            if (hoverAction.ReadValue<float>() > 0 && rb.linearVelocity.y <= 0)
+            {
+                rb.linearDamping = 0;
+                rb.AddForce(Vector3.up * Mathf.Abs(Physics.gravity.y) * rb.mass * 0.8f);
+                Vector3 hoverV = rb.linearVelocity;
+                Vector3 hoverFlatV = new Vector3(v.x, 0f, v.z);
+                rb.AddForce(-hoverFlatV * 0.1f, ForceMode.VelocityChange);
+            }
+            else
+            {
+                rb.linearDamping = 0;
+            }
         }
         //else{rb.constraints = RigidbodyConstraints.None;}
 
