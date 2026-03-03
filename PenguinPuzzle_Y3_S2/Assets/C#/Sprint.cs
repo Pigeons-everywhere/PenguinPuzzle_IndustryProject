@@ -8,6 +8,7 @@ public class Spri : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         Rigidbody rb = other.GetComponent<Rigidbody>();
 
        
@@ -20,7 +21,8 @@ public class Spri : MonoBehaviour
         Vector3 sprintDirection = Quaternion.AngleAxis(-sprintAngle, other.transform.right) * forward;
 
         rb.linearVelocity = sprintDirection * speed * sprintSpeedUp;
-        rb.linearDamping = 0f;
 
+        rb.linearDamping = 0f;
+        rb.angularVelocity = Vector3.zero;
     }
 }
