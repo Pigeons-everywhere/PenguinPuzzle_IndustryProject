@@ -220,7 +220,11 @@ public class CharacterMovement : MonoBehaviour
 
         rb.linearVelocity = penguinVelocity;
 
-        anim.SetTrigger("Walk");
+        float speed = moveDirection.magnitude;
+        bool isHovering = !isGrounded && hoverAction.ReadValue<float>() > 0;
+
+        anim.SetFloat("Speed", speed);
+        anim.SetBool("IsHover", isHovering);
 
         if (!isGrounded)
         {
