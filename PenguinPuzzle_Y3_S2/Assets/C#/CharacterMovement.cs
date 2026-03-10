@@ -180,6 +180,8 @@ public class CharacterMovement : MonoBehaviour
     public float hoverSpeed = 0.5f;
     [SerializeField] bool isGrounded = true;
 
+    public float pushForce = 5f;
+
 
     void Start()
     {
@@ -241,5 +243,11 @@ public class CharacterMovement : MonoBehaviour
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.tag == "Ground") isGrounded = false;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        BoxController box = hit.collider.GetComponent<BoxController>();
+        box.Push(hit.moveDirection, moveSpeed);
     }
 }
