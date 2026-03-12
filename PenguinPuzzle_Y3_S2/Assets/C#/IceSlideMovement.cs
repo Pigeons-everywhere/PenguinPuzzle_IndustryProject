@@ -201,8 +201,8 @@ public class IceSlideMovement : MonoBehaviour
                 rb.linearDamping = 0;
                 rb.AddForce(Vector3.up * Mathf.Abs(Physics.gravity.y) * rb.mass * 0.8f);
                 Vector3 hoverV = rb.linearVelocity;
-                Vector3 hoverFlatV = new Vector3(v.x, 0f, v.z);
-                rb.AddForce(-hoverFlatV * 0.1f, ForceMode.VelocityChange);
+                Vector3 hoverFlatV = new Vector3(hoverV.x, 0f, hoverV.z);
+                rb.AddForce(-hoverFlatV * 0.05f, ForceMode.VelocityChange);
             }
             else
             {

@@ -8,7 +8,6 @@ public class IceTrigger : MonoBehaviour
         {
             MovementManager manager = other.GetComponent<MovementManager>();
             manager.SwitchToSlide();
-            
         }
     }
 

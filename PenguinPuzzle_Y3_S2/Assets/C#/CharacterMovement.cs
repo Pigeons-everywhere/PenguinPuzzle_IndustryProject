@@ -245,9 +245,13 @@ public class CharacterMovement : MonoBehaviour
         if (other.gameObject.tag == "Ground") isGrounded = false;
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnCollisionStay(Collision push)
     {
-        BoxController box = hit.collider.GetComponent<BoxController>();
-        box.Push(hit.moveDirection, moveSpeed);
+        BoxController box = push.collider.GetComponent<BoxController>();
+        if (box != null)
+        {
+            Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+            box.Push(moveDirection, moveSpeed);
+        }
     }
 }
