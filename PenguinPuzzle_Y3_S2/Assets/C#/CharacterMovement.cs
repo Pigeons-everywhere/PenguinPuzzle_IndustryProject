@@ -254,7 +254,7 @@ public class CharacterMovement : MonoBehaviour
         box.Push(hit.moveDirection, moveSpeed);
     }
 
-    void OnTriggerEnter(Collision other){
+    void OnTriggerEnter(Collider other){
         if (other.gameObject.tag == "Water"){
             //this.transform.y = other.gameObject.transform.y;
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
