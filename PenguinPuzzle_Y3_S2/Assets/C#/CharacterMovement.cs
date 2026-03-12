@@ -237,6 +237,10 @@ public class CharacterMovement : MonoBehaviour
             if (hoverAction.ReadValue<float>() > 0) rb.linearDamping = hoverSpeed;
             else rb.linearDamping = 0;
         }
+
+        if(swimming){
+            Debug.Log("currently swimming");
+        }
         //else{rb.constraints = RigidbodyConstraints.None;}
     }
     private void OnCollisionEnter(Collision other)
@@ -256,7 +260,7 @@ public class CharacterMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if (other.gameObject.tag == "Water"){
-            //this.transform.y = other.gameObject.transform.y;
+            this.transform.position = new Vector3(this.transform.position.x,other.gameObject.transform.position.y,this.transform.position.z);
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
             swimming = true;
         }
