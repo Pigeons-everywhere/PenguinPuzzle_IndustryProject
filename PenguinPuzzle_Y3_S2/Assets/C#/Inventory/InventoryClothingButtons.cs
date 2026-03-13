@@ -4,7 +4,6 @@ using TMPro;
 public class InventoryClothingButtons : MonoBehaviour
 {
     string whatCloth;//what piece of clothing is attached to this button
-    public string ObjName;
     GameManager gM;
     GameObject thisGame;
     GameObject thisDress;
@@ -20,11 +19,14 @@ public class InventoryClothingButtons : MonoBehaviour
         whatCloth = this.gameObject.name;
         gM = GameObject.Find("GameManager").GetComponent<GameManager>();
         thisDress = GameObject.Find("DressupRoom/PenguinWardrobe").transform.Find(whatCloth).gameObject;
-        thisGame = GameObject.Find("Penguin").transform.Find(ObjName).gameObject;
+        thisGame = GameObject.Find("Penguin").transform.Find(whatCloth).gameObject;
         thisCostFish = GameObject.Find($"Inventory/Bckg/ClothesAndCamPanel/InvBckg/Clothes/{whatCloth}/Fish");
         thisUIOff = GameObject.Find($"Inventory/Bckg/ClothesAndCamPanel/InvBckg/Clothes/{gameObject.name}/{gameObject.name}Off");
 
-        if (thisCostFish!=null && fishNeeded == 0){
+        Debug.Log($"{thisCostFish} is the pic, {fishNeeded} is the price");
+
+        if (thisCostFish != null && fishNeeded <= 0){
+            
             thisCostFish.SetActive(false);
         }
         

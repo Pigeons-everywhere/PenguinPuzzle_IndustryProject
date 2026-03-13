@@ -175,6 +175,7 @@ public class CharacterMovement : MonoBehaviour
     private InputAction hoverAction;
     private Animator anim;
 
+    bool swimming = false;
 
     //hovering speed
     public float hoverSpeed = 0.5f;
@@ -200,6 +201,8 @@ public class CharacterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
+
         Vector2 inputValue = moveAction.ReadValue<Vector2>();
 
         Vector3 cameraForward = cameraTransform.forward;
@@ -234,6 +237,10 @@ public class CharacterMovement : MonoBehaviour
             if (hoverAction.ReadValue<float>() > 0) rb.linearDamping = hoverSpeed;
             else rb.linearDamping = 0;
         }
+
+        if(swimming){
+            Debug.Log("currently swimming");
+        }
         //else{rb.constraints = RigidbodyConstraints.None;}
     }
     private void OnCollisionEnter(Collision other)
@@ -252,6 +259,14 @@ public class CharacterMovement : MonoBehaviour
         {
             Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
             box.Push(moveDirection, moveSpeed);
+        }
+    }
+
+    void OnTriggerEnter(Collider other){
+        if (other.gameObject.tag == "Water"){
+            this.transform.position = new Vector3(this.transform.position.x,other.gameObject.transform.position.y,this.transform.position.z);
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+            swimming = true;
         }
     }
 }

@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     public Vector3 respawnPoint = new Vector3(4f,11f,0f);
 
+    public bool endFan = false;
+
 private void Awake() 
 { 
     // If there is an instance, and it's not me, delete myself.

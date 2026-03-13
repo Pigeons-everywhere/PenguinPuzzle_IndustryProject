@@ -12,6 +12,7 @@ TagManager:
   - Door
   - MovingObject
   - Game Manager
+  - Water
   layers:
   - Default
   - TransparentFX
