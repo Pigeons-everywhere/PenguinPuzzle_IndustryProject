@@ -258,7 +258,12 @@ public class CharacterMovement : MonoBehaviour
         if (box != null)
         {
             Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-            box.Push(moveDirection, moveSpeed);
+            if (moveDirection.sqrMagnitude > 0)
+            {
+                Vector3 pushDirection = box.transform.position - transform.position;
+                pushDirection.y = 0;
+                box.Push(pushDirection, moveSpeed);
+            }
         }
     }
 

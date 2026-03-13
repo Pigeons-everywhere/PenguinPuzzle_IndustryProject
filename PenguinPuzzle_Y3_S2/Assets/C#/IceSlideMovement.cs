@@ -195,7 +195,6 @@ public class IceSlideMovement : MonoBehaviour
 
         if (!isGrounded)
         {
-            //rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             if (hoverAction.ReadValue<float>() > 0 && rb.linearVelocity.y <= 0)
             {
                 rb.linearDamping = 0;
@@ -209,7 +208,6 @@ public class IceSlideMovement : MonoBehaviour
                 rb.linearDamping = 0;
             }
         }
-        //else{rb.constraints = RigidbodyConstraints.None;}
 
     }
 

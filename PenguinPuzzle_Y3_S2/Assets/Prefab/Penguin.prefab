@@ -1116,7 +1116,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 0}
   hoverSpeed: 5
   isGrounded: 1
-  pushForce: 5
+  pushForce: 8
 --- !u!114 &2088899064419598475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,11 +1130,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
-  turnSpeed: 50
+  turnSpeed: 75
   maxSpeed: 5
   rb: {fileID: 7493835641065651271}
   startSlide: 0
-  isGrounded: 1
+  isGrounded: 0
   hoverSpeed: 5
 --- !u!114 &4374505945016947114
 MonoBehaviour:
@@ -1233,7 +1233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9111026997465113217
 Transform:
   m_ObjectHideFlags: 0
