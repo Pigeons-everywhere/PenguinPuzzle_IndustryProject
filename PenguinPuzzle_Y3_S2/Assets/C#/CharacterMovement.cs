@@ -201,7 +201,7 @@ public class CharacterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        rb.angularVelocity = new Vector3(0f,0f,0f);
 
         Vector2 inputValue = moveAction.ReadValue<Vector2>();
 
