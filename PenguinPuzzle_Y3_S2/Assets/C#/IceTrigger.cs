@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class IceTrigger : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider penguin)
     {
-        if (other.gameObject.tag == "Penguin")
+        if (penguin.gameObject.tag == "Penguin")
         {
-            MovementManager manager = other.GetComponent<MovementManager>();
+            MovementManager manager = penguin.GetComponent<MovementManager>();
             manager.SwitchToSlide();
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider penguin)
     {
-        if (other.gameObject.tag == "Penguin")
+        if (penguin.gameObject.tag == "Penguin")
         {
-            MovementManager manager = other.GetComponent<MovementManager>();
+            MovementManager manager = penguin.GetComponent<MovementManager>();
             manager.SwitchToWalk();
         }
     }
