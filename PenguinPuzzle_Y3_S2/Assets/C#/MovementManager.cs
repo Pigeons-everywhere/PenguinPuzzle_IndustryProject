@@ -29,11 +29,11 @@ public class MovementManager : MonoBehaviour
         if (horizontalVelocity.sqrMagnitude > 0.1f)
         {
             transform.rotation = Quaternion.LookRotation(horizontalVelocity.normalized);
-            iceSlideMovement.startSlide = true;
+            //iceSlideMovement.startSlide = true;
         }
         else
         {
-            iceSlideMovement.startSlide = false;
+            //iceSlideMovement.startSlide = false;
         }
         //iceSlideMovement.startSlide = true;
     }
@@ -45,7 +45,7 @@ public class MovementManager : MonoBehaviour
         iceSlideMovement.enabled = false;
         characterMovement.enabled = true;
 
-        iceSlideMovement.startSlide = false;
+        //iceSlideMovement.startSlide = false;
 
         rb.linearVelocity = Vector3.zero;
 
