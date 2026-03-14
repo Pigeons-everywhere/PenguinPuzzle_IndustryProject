@@ -1,23 +1,23 @@
-using UnityEngine;
+    using UnityEngine;
 
-public class IceTrigger : MonoBehaviour
-{
-    private void OnTriggerEnter(Collider penguin)
+    public class IceTrigger : MonoBehaviour
     {
-        if (penguin.gameObject.tag == "Penguin")
+        private void OnTriggerEnter(Collider penguin)
         {
-            MovementManager manager = penguin.GetComponent<MovementManager>();
-            manager.SwitchToSlide();
+            if (penguin.gameObject.tag == "Penguin")
+            {
+                MovementManager manager = penguin.GetComponent<MovementManager>();
+                manager.SwitchToSlide();
+            }
+        }
+
+        private void OnTriggerExit(Collider penguin)
+        {
+            if (penguin.gameObject.tag == "Penguin")
+            {
+                MovementManager manager = penguin.GetComponent<MovementManager>();
+                manager.SwitchToWalk();
+            }
         }
     }
-
-    private void OnTriggerExit(Collider penguin)
-    {
-        if (penguin.gameObject.tag == "Penguin")
-        {
-            MovementManager manager = penguin.GetComponent<MovementManager>();
-            manager.SwitchToWalk();
-        }
-    }
-}
 

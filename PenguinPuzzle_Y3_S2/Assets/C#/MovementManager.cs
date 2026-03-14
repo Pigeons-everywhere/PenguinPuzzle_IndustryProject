@@ -5,13 +5,14 @@ public class MovementManager : MonoBehaviour
     public CharacterMovement characterMovement;
     public IceSlideMovement iceSlideMovement;
     //public CameraControl cameraControl;
+    private Animator anim;
 
     private Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        anim = GetComponent<Animator>();
         characterMovement.enabled = true;
         iceSlideMovement.enabled = false;
     }
@@ -31,11 +32,7 @@ public class MovementManager : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(horizontalVelocity.normalized);
             //iceSlideMovement.startSlide = true;
         }
-        else
-        {
-            //iceSlideMovement.startSlide = false;
-        }
-        //iceSlideMovement.startSlide = true;
+        anim.SetBool("IsSliding", true);
     }
     
     public void SwitchToWalk()
@@ -48,6 +45,6 @@ public class MovementManager : MonoBehaviour
         //iceSlideMovement.startSlide = false;
 
         rb.linearVelocity = Vector3.zero;
-
+        anim.SetBool("IsSliding", false);
     }
 }

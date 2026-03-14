@@ -27,7 +27,7 @@ public class IceSlideMovement : MonoBehaviour
     private InputAction hoverAction;
     public float hoverSpeed = 5;
 
-
+    private Animator anim;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -38,6 +38,7 @@ public class IceSlideMovement : MonoBehaviour
         hoverAction = inputActions.Player.Hover;
 
         inputActions.Enable();
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -102,6 +103,10 @@ public class IceSlideMovement : MonoBehaviour
             }
         }
 
+        anim.SetFloat("VY", rb.linearVelocity.y);
+
+        bool isHovering = !isGrounded && hoverAction.ReadValue<float>() > 0 && rb.linearVelocity.y <= 0;
+        anim.SetBool("IsHover", isHovering);
     }
 
     private void OnCollisionEnter(Collision other)
