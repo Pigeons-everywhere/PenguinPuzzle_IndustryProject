@@ -3,13 +3,13 @@ using TMPro;
 
 public class FishBehaviour : MonoBehaviour
 {
-    [SerializeField]GameManager gM;
+    [SerializeField]UIGameSceneManager gM;
     [SerializeField]TMP_Text fishCount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gM = GameObject.Find("GameManager").GetComponent<UIGameSceneManager>();
         fishCount = GameObject.Find("Inventory/Bckg/Panel/FishCount").GetComponent<TMP_Text>();
 
         fishCount.text = $"{gM.fish}";

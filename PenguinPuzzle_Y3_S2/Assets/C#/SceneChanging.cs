@@ -8,7 +8,7 @@ public class SceneChanging : MonoBehaviour
 {
     [SerializeField] List<string> scenes = new List<string> {"MainMenu","Lvl1", "Lvl2","Lvl3","SampleScene","Map"};
     [SerializeField] GameObject gameManagerObj;
-    GameManager gMan; //game manager script
+    UIGameSceneManager gMan; //game manager script
     GameObject censorBar;
     private int sceneToGoTo;
 
@@ -17,7 +17,7 @@ public class SceneChanging : MonoBehaviour
 
     private void Start() {
         gameManagerObj = GameObject.Find("GameManager");
-        gMan = gameManagerObj.GetComponent<GameManager>();
+        gMan = gameManagerObj.GetComponent<UIGameSceneManager>();
 
         if (SceneManager.GetActiveScene().name == "Map")
         {

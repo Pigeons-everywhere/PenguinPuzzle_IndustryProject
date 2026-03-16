@@ -5,12 +5,12 @@ public class FanBehaviour : MonoBehaviour
     GameObject whereToEnd;
     bool effectOn = false;
     GameObject pengu;
-    GameManager gM;
+    UIGameSceneManager gM;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         whereToEnd = GameObject.Find($"{this.gameObject.name}/EndPlace");
-        gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gM = GameObject.Find("GameManager").GetComponent<UIGameSceneManager>();
     }
 
     void Update(){

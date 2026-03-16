@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class AccessoryBehaviour : MonoBehaviour
 {
-    GameManager gM;
+    UIGameSceneManager gM;
     GameObject thisUIOff;
 
     private void Start(){
-        gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gM = GameObject.Find("GameManager").GetComponent<UIGameSceneManager>();
         thisUIOff = GameObject.Find($"Inventory/Bckg/ClothesAndCamPanel/InvBckg/Clothes/{gameObject.name}/{gameObject.name}Off");
 
         if (gM.clothes.Contains(gameObject.name)) {

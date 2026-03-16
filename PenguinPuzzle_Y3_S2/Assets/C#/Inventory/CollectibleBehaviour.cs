@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class CollectibleBehaviour : MonoBehaviour
 {
-    [SerializeField]GameManager gM;
+    [SerializeField]UIGameSceneManager gM;
     [SerializeField]GameObject thisUI;
 
     private void Start(){
-        gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gM = GameObject.Find("GameManager").GetComponent<UIGameSceneManager>();
         thisUI = GameObject.Find($"Inventory/Bckg/Panel/{gameObject.name}/{gameObject.name}On");
 
         if (!gM.trophies.Contains(gameObject.name)) thisUI.SetActive(false);

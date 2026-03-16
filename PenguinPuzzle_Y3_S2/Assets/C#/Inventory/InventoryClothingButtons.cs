@@ -4,7 +4,7 @@ using TMPro;
 public class InventoryClothingButtons : MonoBehaviour
 {
     string whatCloth;//what piece of clothing is attached to this button
-    GameManager gM;
+    UIGameSceneManager gM;
     GameObject thisGame;
     GameObject thisDress;
     GameObject thisCostFish;
@@ -17,7 +17,7 @@ public class InventoryClothingButtons : MonoBehaviour
     void Start()
     {
         whatCloth = this.gameObject.name;
-        gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gM = GameObject.Find("GameManager").GetComponent<UIGameSceneManager>();
         thisDress = GameObject.Find("DressupRoom/PenguinWardrobe").transform.Find(whatCloth).gameObject;
         thisGame = GameObject.Find("Penguin").transform.Find(whatCloth).gameObject;
         thisCostFish = GameObject.Find($"Inventory/Bckg/ClothesAndCamPanel/InvBckg/Clothes/{whatCloth}/Fish");

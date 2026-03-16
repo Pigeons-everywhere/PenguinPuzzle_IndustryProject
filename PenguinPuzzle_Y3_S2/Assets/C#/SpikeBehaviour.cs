@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpikeBehaviour: MonoBehaviour
 {
     public Vector3 starterPosition;
-    GameManager gM;
+    UIGameSceneManager gM;
     public Vector3 starterRotation = new Vector3(0f,90f,0f);
 
     [SerializeField] CharacterMovement penguinMoves;
@@ -20,7 +20,7 @@ public class SpikeBehaviour: MonoBehaviour
         keys = GameObject.FindGameObjectsWithTag("Key");
         doors =  GameObject.FindGameObjectsWithTag("Door");
         platforms = GameObject.FindGameObjectsWithTag("MovingObject");
-        gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gM = GameObject.Find("GameManager").GetComponent<UIGameSceneManager>();
         //starterPosition = gameManagerObj.GetComponent<GameManager>().respawnPoint;
     }
 

@@ -5,7 +5,7 @@ public class UIManager : MonoBehaviour
 {
     public void ChangeScene(String name)
     {
-        GameManager.Instance.SetSceneName(name);
+        UISceneManager.Instance.SetSceneName(name);
     }
 
 }

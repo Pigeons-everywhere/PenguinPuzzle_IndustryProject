@@ -2,11 +2,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class UISceneManager : MonoBehaviour
 {
 
-    public static GameManager Instance { get; private set; }
+    public static UISceneManager Instance { get; private set; }
     [SerializeField] public string currentScene; //Tracks current Scene
+    public string playerName; 
 
     void Awake()
     {
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.sceneCount == 1)
         {
-            SetSceneName("01_Menu_Scene");
+            SetSceneName("01 Menu");
         }
     }
 
@@ -43,4 +44,8 @@ public class GameManager : MonoBehaviour
         currentScene = name;
     }
 
+    public void ChangeName(string name)
+    {
+        playerName = name;
+    }
 }

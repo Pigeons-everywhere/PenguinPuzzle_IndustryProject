@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|c:\\gsa industry\\penguinpuzzle_industryproject\\penguinpuzzle_y3_s2\\assets\\scripts\\ui_panel_toggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui_panel_toggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|c:\\gsa industry\\penguinpuzzle_industryproject\\penguinpuzzle_y3_s2\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|c:\\gsa industry\\penguinpuzzle_industryproject\\penguinpuzzle_y3_s2\\assets\\scripts\\panel_toggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\panel_toggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UI_Panel_Toggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI_Panel_Toggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\assets\\c#\\iceslidemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -100,6 +100,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\assets\\c#\\buttonpressmoving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\c#\\buttonpressmoving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\Panel_Toggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Panel_Toggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,19 +118,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UI_Panel_Toggle.cs",
-              "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UI_Panel_Toggle.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI_Panel_Toggle.cs",
-              "ToolTip": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UI_Panel_Toggle.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI_Panel_Toggle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T15:31:01.136Z",
+              "WhenOpened": "2026-03-16T15:41:02.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UI_Panel_Toggle.cs",
+              "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UI_Panel_Toggle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI_Panel_Toggle.cs",
+              "ToolTip": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UI_Panel_Toggle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI_Panel_Toggle.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T15:31:01.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "Panel_Toggle.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\Panel_Toggle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Panel_Toggle.cs",
@@ -134,8 +149,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Panel_Toggle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T15:29:39.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T15:29:39.533Z"
             },
             {
               "$type": "Document",
@@ -169,7 +183,8 @@
               "RelativeToolTip": "Assets\\C#\\Lvl2Mechanics\\FanBehaviour.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T15:18:02.321Z"
+              "WhenOpened": "2026-03-13T15:18:02.321Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -181,7 +196,8 @@
               "RelativeToolTip": "Assets\\C#\\Inventory\\CollectibleBehaviour.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:37:25.647Z"
+              "WhenOpened": "2026-03-12T17:37:25.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -241,7 +257,8 @@
               "RelativeToolTip": "Assets\\C#\\SceneChanging.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAQwDgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T18:01:24.057Z"
+              "WhenOpened": "2026-02-19T18:01:24.057Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -301,7 +318,8 @@
               "RelativeToolTip": "Assets\\C#\\Locked Doors Code\\KeyBehaviour.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T15:00:17.09Z"
+              "WhenOpened": "2026-02-13T15:00:17.09Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -313,7 +331,8 @@
               "RelativeToolTip": "Assets\\C#\\Locked Doors Code\\DoorBehaviour.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T15:00:16.152Z"
+              "WhenOpened": "2026-02-13T15:00:16.152Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -361,7 +380,8 @@
               "RelativeToolTip": "Assets\\C#\\SpikeBehaviour.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAADwvxgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T18:55:43.597Z"
+              "WhenOpened": "2026-02-10T18:55:43.597Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
