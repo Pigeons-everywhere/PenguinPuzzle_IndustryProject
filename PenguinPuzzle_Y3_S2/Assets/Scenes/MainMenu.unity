@@ -622,7 +622,13 @@ MonoBehaviour:
   hasKey: 0
   lastLevelCompleted: 0
   highestLevelReached: MainMenu
+  clothes: []
+  trophies: []
+  fish: 0
+  wearing: []
+  doneOrNot: 0
   respawnPoint: {x: 4, y: 11, z: 0}
+  endFan: 0
 --- !u!4 &2052435981
 Transform:
   m_ObjectHideFlags: 0

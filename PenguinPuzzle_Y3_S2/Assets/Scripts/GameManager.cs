@@ -1,0 +1,46 @@
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameManager : MonoBehaviour
+{
+
+    public static GameManager Instance { get; private set; }
+    [SerializeField] public string currentScene; //Tracks current Scene
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+            Init();
+    }
+
+   private void Init()
+    {
+        if (SceneManager.sceneCount == 1)
+        {
+            SetSceneName("01_Menu_Scene");
+        }
+    }
+
+    public void SetSceneName(string name)
+    {
+        // Unload previous scene if more than one is loaded
+        if (SceneManager.sceneCount > 1 && !string.IsNullOrEmpty(currentScene))
+        {
+            SceneManager.UnloadSceneAsync(currentScene);
+        }
+
+        // Load new scene additively
+        SceneManager.LoadScene(name, LoadSceneMode.Additive);
+        currentScene = name;
+    }
+
+}
