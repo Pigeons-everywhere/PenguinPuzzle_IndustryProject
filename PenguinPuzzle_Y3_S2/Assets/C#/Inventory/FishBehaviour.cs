@@ -15,7 +15,7 @@ public class FishBehaviour : MonoBehaviour
         fishCount.text = $"{gM.fish}";
     }
 
-    void OnCollisionEnter(Collision other){
+    void OnTriggerEnter(Collider other){
         if (other.gameObject.tag == "Penguin"){
             Debug.Log("atta fish");
             gM.fish += 1;
