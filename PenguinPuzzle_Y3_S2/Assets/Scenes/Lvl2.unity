@@ -1898,6 +1898,7 @@ GameObject:
   - component: {fileID: 1590792344}
   - component: {fileID: 1590792343}
   - component: {fileID: 1590792346}
+  - component: {fileID: 1590792347}
   m_Layer: 0
   m_Name: Water Ground
   m_TagString: Untagged
@@ -1967,7 +1968,7 @@ Transform:
   m_GameObject: {fileID: 1590792341}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -141.28911, y: -5.2, z: -147.98871}
+  m_LocalPosition: {x: -141.28911, y: -5.7, z: -147.98871}
   m_LocalScale: {x: 18.704, y: 18.704, z: 18.704}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1994,6 +1995,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.999999, y: 2.2204459e-16, z: 9.999999}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1590792347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590792341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a9a502395b4b84891a092f375542ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starterPosition: {x: 19, y: 5, z: 20}
+  starterRotation: {x: 0, y: 90, z: 0}
+  penguinMoves: {fileID: 0}
+  keys: []
+  doors: []
+  keyIcon: {fileID: 0}
+  platforms: []
+  platformAnims: {fileID: 0}
 --- !u!1001 &1719306867
 PrefabInstance:
   m_ObjectHideFlags: 0
