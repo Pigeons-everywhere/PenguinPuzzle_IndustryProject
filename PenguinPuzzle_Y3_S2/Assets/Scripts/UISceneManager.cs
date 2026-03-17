@@ -7,7 +7,7 @@ public class UISceneManager : MonoBehaviour
 
     public static UISceneManager Instance { get; private set; }
     [SerializeField] public string currentScene; //Tracks current Scene
-    public string playerName; 
+    
 
     void Awake()
     {
@@ -42,10 +42,5 @@ public class UISceneManager : MonoBehaviour
         // Load new scene additively
         SceneManager.LoadScene(name, LoadSceneMode.Additive);
         currentScene = name;
-    }
-
-    public void ChangeName(string name)
-    {
-        playerName = name;
     }
 }

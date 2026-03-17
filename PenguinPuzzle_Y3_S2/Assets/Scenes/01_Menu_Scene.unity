@@ -6656,7 +6656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: 01_Menu-Scene
-  playerName: 
 --- !u!1 &1148038966
 GameObject:
   m_ObjectHideFlags: 0
@@ -7458,7 +7457,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4490341016055688583, guid: 2e4dbab143c53bc498a737db75ff5bc6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -12046,16 +12046,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2104088327}
-        m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
-        m_MethodName: OnPlayButton
-        m_Mode: 1
+      - m_Target: {fileID: 845322237}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Map
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &2104088326
