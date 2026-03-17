@@ -27,6 +27,9 @@ public class IceSlideMovement : MonoBehaviour
     private InputAction hoverAction;
     public float hoverSpeed = 5;
 
+    //audio
+    PenguinAudio audioMan;
+
     private Animator anim;
     void Start()
     {
@@ -39,6 +42,9 @@ public class IceSlideMovement : MonoBehaviour
 
         inputActions.Enable();
         anim = GetComponent<Animator>();
+
+        //audio manager
+        audioMan = this.gameObject.GetComponent<PenguinAudio>();
     }
 
     void FixedUpdate()
@@ -50,6 +56,7 @@ public class IceSlideMovement : MonoBehaviour
 
         Vector3 slideDir = transform.forward * inputValue.y * moveSpeed;
         rb.AddForce(slideDir, ForceMode.Force);
+        
 
         Vector3 slideV = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         if (slideV.magnitude > maxSpeed)
@@ -87,6 +94,12 @@ public class IceSlideMovement : MonoBehaviour
 
         rb.MoveRotation(rb.rotation * turn);*/
 
+
+        anim.SetFloat("VY", rb.linearVelocity.y);
+
+        bool isHovering = !isGrounded && hoverAction.ReadValue<float>() > 0 && rb.linearVelocity.y <= 0;
+        anim.SetBool("IsHover", isHovering);
+
         if (!isGrounded)
         {
             if (hoverAction.ReadValue<float>() > 0 && rb.linearVelocity.y <= 0)
@@ -96,23 +109,34 @@ public class IceSlideMovement : MonoBehaviour
                 Vector3 hoverV = rb.linearVelocity;
                 Vector3 hoverFlatV = new Vector3(hoverV.x, 0f, hoverV.z);
                 rb.AddForce(-hoverFlatV * 0.05f, ForceMode.VelocityChange);
+                audioMan.StartPenguAudio("hover");
             }
             else
             {
+                audioMan.StopPenguAudio();
                 rb.linearDamping = 0;
             }
+            return;
         }
 
-        anim.SetFloat("VY", rb.linearVelocity.y);
+        if (inputValue.x != 0 || inputValue.y != 0)
+        {
+            audioMan.StartPenguAudio("slide");
+        }
+        else if (isGrounded) audioMan.StopPenguAudio();
 
-        bool isHovering = !isGrounded && hoverAction.ReadValue<float>() > 0 && rb.linearVelocity.y <= 0;
-        anim.SetBool("IsHover", isHovering);
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Ground") isGrounded = true;
     }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.tag == "Ground") isGrounded = true;
+    }
+    
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.tag == "Ground") isGrounded = false;

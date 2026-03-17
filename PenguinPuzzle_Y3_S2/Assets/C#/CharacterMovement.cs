@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
+    PenguinAudio audioMan;
+
+
     [SerializeField]
     //Character movement speed
     public float moveSpeed = 5f;
@@ -38,6 +41,9 @@ public class CharacterMovement : MonoBehaviour
         hoverAction = inputActions.Player.Hover;
 
         inputActions.Enable();
+
+        //audio manager
+        audioMan = this.gameObject.GetComponent<PenguinAudio>();
     }
 
 
@@ -81,17 +87,37 @@ public class CharacterMovement : MonoBehaviour
         anim.SetBool("IsHover", isHovering);
         anim.SetBool("IsSwimming", false);
         }
+
         if (!isGrounded)
         {
-            if (hoverAction.ReadValue<float>() > 0) rb.linearDamping = hoverSpeed;
-            else rb.linearDamping = 0;
+            if (hoverAction.ReadValue<float>() > 0) {
+                rb.linearDamping = hoverSpeed;
+                audioMan.StartPenguAudio("hover");
+
+            }
+            else
+            {
+                rb.linearDamping = 0;
+                audioMan.StopPenguAudio();
+            }
+
+            return;
         }
 
+        if (inputValue.x != 0 || inputValue.y != 0)
+        {
+            audioMan.StartPenguAudio("walk");
+        }
+        else if (isGrounded) audioMan.StopPenguAudio();
     }
+
+
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Ground") isGrounded = true;
+        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Floor") isGrounded = true;
     }
+
+
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.tag == "Ground") isGrounded = false;
@@ -99,6 +125,8 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnCollisionStay(Collision push)
     {
+        if (push.gameObject.tag == "Ground") isGrounded = true;
+
         BoxController box = push.collider.GetComponent<BoxController>();
         if (box != null)
         {
