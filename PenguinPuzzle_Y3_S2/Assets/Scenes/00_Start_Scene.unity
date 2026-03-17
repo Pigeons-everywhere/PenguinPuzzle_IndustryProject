@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1850c7bb0c24c74292baaedff95adde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: 
+  currentScene: 00_start_Scene
   playerName: 
 --- !u!1001 &1691845656
 PrefabInstance:

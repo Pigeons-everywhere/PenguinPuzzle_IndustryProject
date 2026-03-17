@@ -27,7 +27,7 @@ public class UISceneManager : MonoBehaviour
     {
         if (SceneManager.sceneCount == 1)
         {
-            SetSceneName("01 Menu");
+            SetSceneName("01_Menu_Scene");
         }
     }
 

@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|c:\\gsa industry\\penguinpuzzle_industryproject\\penguinpuzzle_y3_s2\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|c:\\gsa industry\\penguinpuzzle_industryproject\\penguinpuzzle_y3_s2\\assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UI_Panel_Toggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,19 +122,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UIManager.cs",
+              "ToolTip": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UIManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T15:41:02.631Z",
+              "WhenOpened": "2026-03-16T15:47:01.758Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T15:41:02.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UI_Panel_Toggle.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UI_Panel_Toggle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI_Panel_Toggle.cs",
@@ -141,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Panel_Toggle.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\Panel_Toggle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Panel_Toggle.cs",
@@ -153,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SnowBehaviour.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\SnowBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\SnowBehaviour.cs",
@@ -165,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CharacterController.cs",
               "DocumentMoniker": "E:\\GitHub Clone\\Multiplayer_Robotfight\\Assets\\Scripts\\CharacterController.cs",
               "ToolTip": "E:\\GitHub Clone\\Multiplayer_Robotfight\\Assets\\Scripts\\CharacterController.cs",
@@ -175,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "FanBehaviour.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\Lvl2Mechanics\\FanBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\Lvl2Mechanics\\FanBehaviour.cs",
@@ -183,12 +198,11 @@
               "RelativeToolTip": "Assets\\C#\\Lvl2Mechanics\\FanBehaviour.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T15:18:02.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T15:18:02.321Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CollectibleBehaviour.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\Inventory\\CollectibleBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\Inventory\\CollectibleBehaviour.cs",
@@ -196,12 +210,11 @@
               "RelativeToolTip": "Assets\\C#\\Inventory\\CollectibleBehaviour.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:37:25.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-12T17:37:25.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BoxController.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\BoxController\\BoxController.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\BoxController\\BoxController.cs",
@@ -213,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Sprint.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\Sprint.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\Sprint.cs",
@@ -225,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MovementManager.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\MovementManager.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\MovementManager.cs",
@@ -237,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IceTrigger.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\IceTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\IceTrigger.cs",
@@ -249,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "SceneChanging.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\SceneChanging.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\SceneChanging.cs",
@@ -257,12 +270,11 @@
               "RelativeToolTip": "Assets\\C#\\SceneChanging.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAQwDgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T18:01:24.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-19T18:01:24.057Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "ShadowFollow.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\ShadowFollow.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\ShadowFollow.cs",
@@ -274,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "ButtonPressMoving.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\ButtonPressMoving.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\ButtonPressMoving.cs",
@@ -286,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "TelescopeSwitch.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\Telescope\\TelescopeSwitch.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\Telescope\\TelescopeSwitch.cs",
@@ -298,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Telescope.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\Telescope\\Telescope.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\Telescope\\Telescope.cs",
@@ -310,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "KeyBehaviour.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\Locked Doors Code\\KeyBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\Locked Doors Code\\KeyBehaviour.cs",
@@ -318,12 +330,11 @@
               "RelativeToolTip": "Assets\\C#\\Locked Doors Code\\KeyBehaviour.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T15:00:17.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-13T15:00:17.09Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "DoorBehaviour.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\Locked Doors Code\\DoorBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\Locked Doors Code\\DoorBehaviour.cs",
@@ -331,12 +342,11 @@
               "RelativeToolTip": "Assets\\C#\\Locked Doors Code\\DoorBehaviour.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T15:00:16.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-13T15:00:16.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "HideOnStart.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\HideOnStart.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\HideOnStart.cs",
@@ -348,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ClimbLadders.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\Ladder code\\ClimbLadders.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\Ladder code\\ClimbLadders.cs",
@@ -360,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "LeaveLadders.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\Ladder code\\LeaveLadders.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\Ladder code\\LeaveLadders.cs",
@@ -372,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "SpikeBehaviour.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\SpikeBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\SpikeBehaviour.cs",
@@ -380,12 +390,11 @@
               "RelativeToolTip": "Assets\\C#\\SpikeBehaviour.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAADwvxgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T18:55:43.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-10T18:55:43.597Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CameraControl.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\CameraControl.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\CameraControl.cs",
@@ -397,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ChangeUi.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\ChangeUi.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\ChangeUi.cs",
@@ -409,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IceSlideMovement.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\IceSlideMovement.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\IceSlideMovement.cs",
@@ -421,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CharacterMovement.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\C#\\CharacterMovement.cs",
               "RelativeDocumentMoniker": "Assets\\C#\\CharacterMovement.cs",
