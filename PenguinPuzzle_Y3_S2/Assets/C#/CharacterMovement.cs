@@ -24,7 +24,8 @@ public class CharacterMovement : MonoBehaviour
     public float hoverSpeed = 0.5f;
     [SerializeField] bool isGrounded = true;
 
-    public float pushForce = 5f;
+    [SerializeField] public float pushForce = 5f;
+    [SerializeField] public float swimSpeed = 8f;
 
 
     void Start()
@@ -62,17 +63,25 @@ public class CharacterMovement : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(moveDirection);
         }
 
-        Vector3 penguinVelocity = moveDirection * moveSpeed;
+        if (swimming)
+        {
+            rb.AddForce(moveDirection.x * swimSpeed, 0f, moveDirection.z * swimSpeed);
+            rb.linearDamping = 5f;
+        }
+        else
+        {
+            Vector3 penguinVelocity = moveDirection * moveSpeed;
 
-        penguinVelocity.y = rb.linearVelocity.y;
+            penguinVelocity.y = rb.linearVelocity.y;
 
-        rb.linearVelocity = penguinVelocity;
+            rb.linearVelocity = penguinVelocity;
 
-        float speed = moveDirection.magnitude;
-        bool isHovering = !isGrounded && hoverAction.ReadValue<float>() > 0;
+            float speed = moveDirection.magnitude;
+            bool isHovering = !isGrounded && hoverAction.ReadValue<float>() > 0;
 
-        anim.SetFloat("Speed", speed);
-        anim.SetBool("IsHover", isHovering);
+            anim.SetFloat("Speed", speed);
+            anim.SetBool("IsHover", isHovering);
+        }
 
         if (!isGrounded)
         {
@@ -80,11 +89,6 @@ public class CharacterMovement : MonoBehaviour
             if (hoverAction.ReadValue<float>() > 0) rb.linearDamping = hoverSpeed;
             else rb.linearDamping = 0;
         }
-
-        if(swimming){
-            Debug.Log("currently swimming");
-        }
-        //else{rb.constraints = RigidbodyConstraints.None;}
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -110,11 +114,20 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other){
+    void OnTriggerEnter(Collider other)
+    {
         if (other.gameObject.tag == "Water"){
             this.transform.position = new Vector3(this.transform.position.x,other.gameObject.transform.position.y,this.transform.position.z);
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
             swimming = true;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Water")
+        {
+            swimming = false;
+            rb.linearDamping = 0f;
         }
     }
 }
