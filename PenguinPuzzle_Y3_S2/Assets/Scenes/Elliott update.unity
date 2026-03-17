@@ -1965,7 +1965,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 1695b5f4a1302d44f98019fe4874ec98, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4d175b9eca05a3548a55a559356d6e54, type: 2}
+      objectReference: {fileID: 2100000, guid: 4de424a01b88b1545b00ff19c54ac51a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1695b5f4a1302d44f98019fe4874ec98, type: 3}
       propertyPath: m_Name
       value: TinCan
@@ -1973,11 +1973,11 @@ PrefabInstance:
     - target: {fileID: 2858861989129603195, guid: 1695b5f4a1302d44f98019fe4874ec98, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4d175b9eca05a3548a55a559356d6e54, type: 2}
+      objectReference: {fileID: 2100000, guid: df28681a9195e6e4291b5383201b7eed, type: 2}
     - target: {fileID: 9146517011816410474, guid: 1695b5f4a1302d44f98019fe4874ec98, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: f4d7149bd5c92ea429fa10fbc520a208, type: 2}
+      objectReference: {fileID: 2100000, guid: df28681a9195e6e4291b5383201b7eed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
