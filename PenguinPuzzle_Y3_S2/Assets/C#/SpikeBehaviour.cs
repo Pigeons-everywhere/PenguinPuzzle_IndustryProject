@@ -24,18 +24,19 @@ public class SpikeBehaviour: MonoBehaviour
         //starterPosition = gameManagerObj.GetComponent<GameManager>().respawnPoint;
     }
 
-    private void OnCollisionEnter(Collision col){
+    private void OnTriggerEnter(Collider col){
         if (col.gameObject.tag == "Penguin"){
+            Debug.Log("respawn him");
             gM.endFan = true;
 
             penguinMoves = col.gameObject.GetComponent<CharacterMovement>();
 
             //penguinMoves.startSlide = false;
 
-            col.rigidbody.linearVelocity = new Vector3(0f,0f,0f);
-            col.rigidbody.angularVelocity = new Vector3(0f,0f,0f);
-            col.rigidbody.position = starterPosition;
-            col.rigidbody.rotation = Quaternion.Euler(starterRotation.x,starterRotation.y,starterRotation.z);
+            col.GetComponent<Rigidbody>().linearVelocity = new Vector3(0f,0f,0f);
+            col.GetComponent<Rigidbody>().angularVelocity = new Vector3(0f,0f,0f);
+            col.GetComponent<Rigidbody>().position = starterPosition;
+            col.GetComponent<Rigidbody>().rotation = Quaternion.Euler(starterRotation.x,starterRotation.y,starterRotation.z);
 
             foreach(GameObject keyO in keys){
                 keyO.SetActive(true);

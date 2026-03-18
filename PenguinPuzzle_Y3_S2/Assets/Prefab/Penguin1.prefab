@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7222753697703342779
 Transform:
   m_ObjectHideFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9013472450171146746
 Transform:
   m_ObjectHideFlags: 0
@@ -589,8 +589,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.000001580487, y: -0.0000015804867, z: -0.7071067, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0.04294302, z: -0.08916433}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 898750487270947405}
   - {fileID: 1175192610218355418}
@@ -785,8 +785,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0.000000061817246, z: 0.000000061817246, w: 0.7071068}
   m_LocalPosition: {x: 0.00019081045, y: 0.16960666, z: -0.10437173}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8726631549589804918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1109,8 +1109,6 @@ GameObject:
   - component: {fileID: 8770928945630487975}
   - component: {fileID: 6793987361812045579}
   - component: {fileID: 5765170904421320158}
-  - component: {fileID: 7318553033610069515}
-  - component: {fileID: 3345799086218037036}
   - component: {fileID: 2838138523514491594}
   - component: {fileID: 7930579559919508957}
   - component: {fileID: 4907377534584353557}
@@ -1173,7 +1171,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8290782892783832528, guid: 2f03e46ed4d250a4a91493f4949a6fca, type: 3}
+  - {fileID: 2934955800964590389, guid: 9601bcab9edaa444f82a279f6cc56215, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1195,49 +1193,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7318553033610069515
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7794908459779710389}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2362671979683230103, guid: 2f03e46ed4d250a4a91493f4949a6fca, type: 3}
---- !u!65 &3345799086218037036
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7794908459779710389}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.1731154, y: 1.1726393, z: 1.1376476}
-  m_Center: {x: -0.009818971, y: -0.29662097, z: 0.035643578}
 --- !u!136 &2838138523514491594
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1304,6 +1259,8 @@ MonoBehaviour:
   cameraTransform: {fileID: 0}
   hoverSpeed: 5
   isGrounded: 1
+  swimSpeed: 10
+  pushForce: 5
 --- !u!114 &1231998770187260049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,7 +1277,6 @@ MonoBehaviour:
   turnSpeed: 50
   maxSpeed: 5
   rb: {fileID: 7930579559919508957}
-  startSlide: 0
   isGrounded: 1
   hoverSpeed: 5
 --- !u!114 &3764624086757524832
@@ -1431,7 +1387,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6878647844548305033}

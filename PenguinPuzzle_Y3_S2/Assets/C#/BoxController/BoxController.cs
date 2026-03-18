@@ -29,18 +29,21 @@ public class BoxController : MonoBehaviour
     }
     public void Push(Vector3 direction, float speed)
     {
-        float inputX = direction.x;
-        float inputZ = direction.z;
+        Vector3 boxDir = transform.InverseTransformDirection(direction);
+        float inputX = boxDir.x;
+        float inputZ = boxDir.z;
 
-        Vector3 moveDir;
+        Vector3 boxMoveDir;
         if (Mathf.Abs(inputX) >= Mathf.Abs(inputZ))
-            moveDir = new Vector3(Mathf.Sign(inputX), 0, 0);
+            boxMoveDir = new Vector3(Mathf.Sign(inputX), 0, 0);
         else
-            moveDir = new Vector3(0, 0, Mathf.Sign(inputZ));
+            boxMoveDir = new Vector3(0, 0, Mathf.Sign(inputZ));
+
+        Vector3 worldMoveDir = transform.TransformDirection(boxMoveDir);
 
         isPushing = true;
         rb.linearDamping = 0;
-        rb.linearVelocity = new Vector3(moveDir.x * speed, rb.linearVelocity.y, moveDir.z * speed);
+        rb.linearVelocity = new Vector3(worldMoveDir.x * speed, rb.linearVelocity.y, worldMoveDir.z * speed);
     }
     private void OnTriggerEnter(Collider isOnIce)
     {

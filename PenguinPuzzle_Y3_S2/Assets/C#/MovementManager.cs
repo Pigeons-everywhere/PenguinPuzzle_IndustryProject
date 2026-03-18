@@ -7,6 +7,8 @@ public class MovementManager : MonoBehaviour
     //public CameraControl cameraControl;
     private Animator anim;
 
+    PenguinAudio audioMan;
+
     private Rigidbody rb;
 
     void Start()
@@ -15,10 +17,14 @@ public class MovementManager : MonoBehaviour
         anim = GetComponent<Animator>();
         characterMovement.enabled = true;
         iceSlideMovement.enabled = false;
+
+        audioMan = this.gameObject.GetComponent<PenguinAudio>();
     }
 
     public void SwitchToSlide()
     {
+        audioMan.StartPenguAudio("slide");
+
         if (iceSlideMovement.enabled) return;
         //get the horizontal speed in normalwalk
         Vector3 currentVelocity = rb.linearVelocity;
@@ -37,6 +43,8 @@ public class MovementManager : MonoBehaviour
     
     public void SwitchToWalk()
     {
+        audioMan.StartPenguAudio("walk");
+
         if (characterMovement.enabled) return;
 
         iceSlideMovement.enabled = false;
