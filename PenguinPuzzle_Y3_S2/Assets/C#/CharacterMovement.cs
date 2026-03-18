@@ -1,11 +1,13 @@
-//old character movement + gravity Evan & Terry
-//Maybe used to switch movement
+//character movement + hover Evan & Terry
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
+    PenguinAudio audioMan;
+
+
     [SerializeField]
     //Character movement speed
     public float moveSpeed = 5f;
@@ -23,8 +25,8 @@ public class CharacterMovement : MonoBehaviour
     //hovering speed
     public float hoverSpeed = 0.5f;
     [SerializeField] bool isGrounded = true;
-
-    public float pushForce = 5f;
+    [SerializeField] public float swimSpeed = 10f;
+    [SerializeField] public float pushForce = 5f;
 
 
     void Start()
@@ -39,6 +41,9 @@ public class CharacterMovement : MonoBehaviour
         hoverAction = inputActions.Player.Hover;
 
         inputActions.Enable();
+
+        //audio manager
+        audioMan = this.gameObject.GetComponent<PenguinAudio>();
     }
 
 
@@ -61,7 +66,14 @@ public class CharacterMovement : MonoBehaviour
             moveDirection.Normalize();
             transform.rotation = Quaternion.LookRotation(moveDirection);
         }
-
+        if (swimming) 
+        {
+            rb.AddForce(moveDirection.x * swimSpeed, 0f, moveDirection.z * swimSpeed);
+            rb.linearDamping = 5f;
+            anim.SetBool("IsSwimming", true);
+        }
+        else
+        {
         Vector3 penguinVelocity = moveDirection * moveSpeed;
 
         penguinVelocity.y = rb.linearVelocity.y;
@@ -73,23 +85,39 @@ public class CharacterMovement : MonoBehaviour
 
         anim.SetFloat("Speed", speed);
         anim.SetBool("IsHover", isHovering);
+        anim.SetBool("IsSwimming", false);
+        }
 
         if (!isGrounded)
         {
-            //rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-            if (hoverAction.ReadValue<float>() > 0) rb.linearDamping = hoverSpeed;
-            else rb.linearDamping = 0;
+            if (hoverAction.ReadValue<float>() > 0) {
+                rb.linearDamping = hoverSpeed;
+                audioMan.StartPenguAudio("hover");
+
+            }
+            else
+            {
+                rb.linearDamping = 0;
+                audioMan.StopPenguAudio();
+            }
+
+            return;
         }
 
-        if(swimming){
-            Debug.Log("currently swimming");
+        if (inputValue.x != 0 || inputValue.y != 0)
+        {
+            audioMan.StartPenguAudio("walk");
         }
-        //else{rb.constraints = RigidbodyConstraints.None;}
+        else if (isGrounded) audioMan.StopPenguAudio();
     }
+
+
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Ground") isGrounded = true;
+        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Floor") isGrounded = true;
     }
+
+
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.tag == "Ground") isGrounded = false;
@@ -97,6 +125,8 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnCollisionStay(Collision push)
     {
+        if (push.gameObject.tag == "Ground") isGrounded = true;
+
         BoxController box = push.collider.GetComponent<BoxController>();
         if (box != null)
         {
@@ -115,6 +145,14 @@ public class CharacterMovement : MonoBehaviour
             this.transform.position = new Vector3(this.transform.position.x,other.gameObject.transform.position.y,this.transform.position.z);
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
             swimming = true;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Water")
+        {
+            swimming = false;
+            rb.linearDamping = 0f;
         }
     }
 }
