@@ -3,6 +3,12 @@ using UnityEngine.InputSystem;
 
 public class TelescopeSwitch : MonoBehaviour
 {
+    //audios
+    AudioSource thisAudio;
+    public AudioClip engageA;
+    public AudioClip disengageA;
+
+
     public GameObject cameraObject;
     public GameObject telescopeCameraObject;
     public GameObject telescopeShadowUI;
@@ -17,6 +23,7 @@ public class TelescopeSwitch : MonoBehaviour
     {
         inputActions = new PlayerInputActions();
         interactionAction = inputActions.Player.Interaction;
+        thisAudio = this.gameObject.GetComponent<AudioSource>(); 
     }
     private void OnEnable()
     {
@@ -38,6 +45,13 @@ public class TelescopeSwitch : MonoBehaviour
     private void OnInteraction(InputAction.CallbackContext context)
     {
         if (!canUseTelescope) return;
+
+        //audio
+        if (usingTelescope) thisAudio.clip = engageA;
+        else thisAudio.clip = disengageA;
+        thisAudio.Play(0);
+        //end of audio        
+
         usingTelescope = !usingTelescope;
 
         cameraObject.SetActive(!usingTelescope);
