@@ -6655,7 +6655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1850c7bb0c24c74292baaedff95adde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: 01_Menu-Scene
+  currentScene: 01_Menu_Scene
 --- !u!1 &1148038966
 GameObject:
   m_ObjectHideFlags: 0
@@ -12078,6 +12078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc51fae3d0651c4488bb48524ab7df7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneToLoad: Map
 --- !u!114 &2104088328
 MonoBehaviour:
   m_ObjectHideFlags: 0

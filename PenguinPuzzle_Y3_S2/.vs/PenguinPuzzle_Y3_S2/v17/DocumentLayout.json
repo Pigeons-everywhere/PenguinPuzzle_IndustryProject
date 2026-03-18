@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|c:\\gsa industry\\penguinpuzzle_industryproject\\penguinpuzzle_y3_s2\\assets\\scripts\\soundpanelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\soundpanelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|c:\\gsa industry\\penguinpuzzle_industryproject\\penguinpuzzle_y3_s2\\assets\\scripts\\uiscenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uiscenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\assets\\scripts\\gamestart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamestart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\assets\\scripts\\uiscenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uiscenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|c:\\gsa industry\\penguinpuzzle_industryproject\\penguinpuzzle_y3_s2\\assets\\scripts\\soundpanelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461A567F-43A3-2597-1D41-A3A8B943AB79}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\soundpanelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -129,36 +129,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "SoundPanelManager.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\SoundPanelManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SoundPanelManager.cs",
               "ToolTip": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\SoundPanelManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\SoundPanelManager.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA3wCgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T14:58:42.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GameStart.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameStart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameStart.cs",
               "ToolTip": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\GameStart.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameStart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T04:42:13.028Z"
+              "WhenOpened": "2026-03-17T04:42:13.028Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UISceneManager.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UISceneManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UISceneManager.cs",
@@ -171,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\GSA Industry\\PenguinPuzzle_IndustryProject\\PenguinPuzzle_Y3_S2\\Assets\\Scripts\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIManager.cs",
@@ -179,7 +180,8 @@
               "RelativeToolTip": "Assets\\Scripts\\UIManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T15:47:01.758Z"
+              "WhenOpened": "2026-03-16T15:47:01.758Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1850c7bb0c24c74292baaedff95adde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: 00_start_Scene
+  currentScene: 00_Start_Scene
 --- !u!1001 &1485116792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254,7 +254,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4490341016055688583, guid: 2e4dbab143c53bc498a737db75ff5bc6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
