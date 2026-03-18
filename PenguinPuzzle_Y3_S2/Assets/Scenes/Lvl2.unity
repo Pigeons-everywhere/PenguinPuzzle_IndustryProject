@@ -1471,6 +1471,8 @@ GameObject:
   - component: {fileID: 225503468}
   - component: {fileID: 225503467}
   - component: {fileID: 225503466}
+  - component: {fileID: 225503470}
+  - component: {fileID: 225503469}
   m_Layer: 0
   m_Name: PopsickleStickBridge_Low
   m_TagString: Untagged
@@ -1486,13 +1488,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225503464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalRotation: {x: -0.4678941, y: 0.5301652, z: -0.4678941, w: -0.5301652}
   m_LocalPosition: {x: -4.0125885, y: 4.637472, z: 22.23854}
   m_LocalScale: {x: 0.009999999, y: 0.01, z: 0.009999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1531447077}
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 82.86, y: 270, z: 0}
 --- !u!65 &225503466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1567,6 +1569,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225503464}
   m_Mesh: {fileID: 5910784794492581380, guid: 08b403a4c37454c44bf78d7bd9aad8c9, type: 3}
+--- !u!95 &225503469
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225503464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7f1d3c25407c9240a1997b69596048b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!54 &225503470
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225503464}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &246716611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,114 +2407,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 5.8692183, z: 1}
   m_Center: {x: 0, y: 2.4346092, z: 0}
---- !u!1 &333537404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 333537405}
-  - component: {fileID: 333537408}
-  - component: {fileID: 333537407}
-  - component: {fileID: 333537406}
-  m_Layer: 0
-  m_Name: Button_Low (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &333537405
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333537404}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.49741, y: 6.687434, z: -2.331459}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1531447077}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &333537406
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333537404}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 107.81775, y: 20, z: 107.81683}
-  m_Center: {x: 0, y: 10.000061, z: 0.000005722046}
---- !u!23 &333537407
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333537404}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 18b8d9a4c40d7a84090954537f4cf82d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &333537408
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333537404}
-  m_Mesh: {fileID: -4452858627302092731, guid: d94541ef7267e664bb8eb3d4127eee3e, type: 3}
 --- !u!1 &345773449
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,6 +4955,7 @@ GameObject:
   - component: {fileID: 827075441}
   - component: {fileID: 827075440}
   - component: {fileID: 827075439}
+  - component: {fileID: 827075442}
   m_Layer: 0
   m_Name: PopsickleStickBridgeShort_Low (2)
   m_TagString: Untagged
@@ -5027,13 +4971,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827075437}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.89100677, z: -0, w: -0.45399022}
+  m_LocalRotation: {x: -0.33111006, y: -0.60959, z: 0.64984083, w: -0.3106013}
   m_LocalPosition: {x: -12.592588, y: 20.661552, z: -4.5114594}
   m_LocalScale: {x: 0.010000002, y: 0.01, z: 0.010000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1531447077}
-  m_LocalEulerAnglesHint: {x: 0, y: -234, z: 0}
+  m_LocalEulerAnglesHint: {x: 93.66101, y: -234, z: 0}
 --- !u!65 &827075439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5108,6 +5052,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827075437}
   m_Mesh: {fileID: 853582669988434209, guid: edd9dcfd313b8424ea71988942c7fa64, type: 3}
+--- !u!95 &827075442
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827075437}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05411486ea0782546a2c0833ae6337f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &841505062
 GameObject:
   m_ObjectHideFlags: 0
@@ -6550,6 +6516,7 @@ GameObject:
   - component: {fileID: 1214705455}
   - component: {fileID: 1214705454}
   - component: {fileID: 1214705453}
+  - component: {fileID: 1214705456}
   m_Layer: 0
   m_Name: PopsickleStickBridgeShort_Low (1)
   m_TagString: Untagged
@@ -6565,13 +6532,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214705451}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.98768836, z: -0, w: 0.1564345}
+  m_LocalRotation: {x: 0.116685525, y: -0.6578503, z: 0.7367233, w: 0.104193285}
   m_LocalPosition: {x: -18.182589, y: 12.637503, z: 11.908541}
   m_LocalScale: {x: 0.009999999, y: 0.01, z: 0.009999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1531447077}
-  m_LocalEulerAnglesHint: {x: 0, y: -162, z: 0}
+  m_LocalEulerAnglesHint: {x: 96.474, y: -162, z: 0}
 --- !u!65 &1214705453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6646,6 +6613,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214705451}
   m_Mesh: {fileID: 853582669988434209, guid: edd9dcfd313b8424ea71988942c7fa64, type: 3}
+--- !u!95 &1214705456
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214705451}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0879555b4850a8b4faa61d1192ef4557, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1226524455
 GameObject:
   m_ObjectHideFlags: 0
@@ -6784,8 +6773,8 @@ Transform:
   m_GameObject: {fileID: 1237410797}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.8910066, z: -0, w: 0.45399043}
-  m_LocalPosition: {x: 18.66991, y: 3.3163, z: 34.54}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalPosition: {x: 18.66991, y: 3.3943, z: 34.54}
+  m_LocalScale: {x: 0.009220126, y: 0.009220126, z: 0.009220126}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1531447077}
@@ -6809,8 +6798,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 200.00008, y: 200.00003, z: 200.00008}
-  m_Center: {x: -0.0009765625, y: 100.000015, z: 0.00048828125}
+  m_Size: {x: 177.15428, y: 179.05968, z: 168.88255}
+  m_Center: {x: -3.105211, y: 99.47367, z: 8.277634}
 --- !u!23 &1237410800
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8088,7 +8077,6 @@ Transform:
   - {fileID: 21955621}
   - {fileID: 784297240}
   - {fileID: 1226524456}
-  - {fileID: 333537405}
   - {fileID: 587303896}
   - {fileID: 1141143796}
   - {fileID: 906859939}
@@ -8124,8 +8112,8 @@ Transform:
   - {fileID: 1634667997}
   - {fileID: 576130627}
   - {fileID: 1572322665}
-  - {fileID: 225503465}
   - {fileID: 370850857}
+  - {fileID: 225503465}
   - {fileID: 1214705452}
   - {fileID: 827075438}
   m_Father: {fileID: 0}
