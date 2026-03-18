@@ -314,9 +314,9 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6718947497816898733, guid: da7f696a2b4ae094895aa21c2314ef98, type: 3}
-  - {fileID: 934714567791821240, guid: da7f696a2b4ae094895aa21c2314ef98, type: 3}
-  - {fileID: 9192737666121797119, guid: da7f696a2b4ae094895aa21c2314ef98, type: 3}
+  - {fileID: 532364259400670332, guid: 1695b5f4a1302d44f98019fe4874ec98, type: 3}
+  - {fileID: -4637428972828790871, guid: 1695b5f4a1302d44f98019fe4874ec98, type: 3}
+  - {fileID: 9192737666121797119, guid: 1695b5f4a1302d44f98019fe4874ec98, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1625,6 +1625,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 0}
   hoverSpeed: 5
   isGrounded: 1
+  swimSpeed: 10
   pushForce: 8
 --- !u!114 &2088899064419598475
 MonoBehaviour:
