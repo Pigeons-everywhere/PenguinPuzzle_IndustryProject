@@ -14,7 +14,7 @@ public class DropBridgeBehaviour : MonoBehaviour
     void Update()
     {
         if (buttonsNeeded == buttonsPressed){
-            thisAnim.Play;
+            //thisAnim.Play;
         }
     }
 }

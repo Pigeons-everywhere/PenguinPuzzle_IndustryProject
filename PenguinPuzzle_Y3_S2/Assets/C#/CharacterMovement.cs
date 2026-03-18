@@ -88,7 +88,7 @@ public class CharacterMovement : MonoBehaviour
         anim.SetBool("IsSwimming", false);
         }
 
-        if (!isGrounded)
+        if (!isGrounded && !swimming)
         {
             if (hoverAction.ReadValue<float>() > 0) {
                 rb.linearDamping = hoverSpeed;
