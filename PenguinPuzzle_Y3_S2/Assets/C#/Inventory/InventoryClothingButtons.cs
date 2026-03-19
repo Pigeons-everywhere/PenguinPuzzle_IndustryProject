@@ -6,7 +6,7 @@ public class InventoryClothingButtons : MonoBehaviour
     string whatCloth;//what piece of clothing is attached to this button
     GameManager gM;
     GameObject thisGame;
-    GameObject thisDress;
+    [SerializeField]GameObject thisDress;
     GameObject thisCostFish;
     public float fishNeeded;
 
@@ -40,7 +40,9 @@ public class InventoryClothingButtons : MonoBehaviour
 
     public void De_EquipCloth()
     {
+        Debug.Log($"{this.gameObject.name} is calling {thisDress}");
         if (gM.fish >= fishNeeded && fishNeeded > 0){
+            Debug.Log("the price is right");
             gM.fish -= fishNeeded;
             fishNeeded = 0;
             thisCostFish.SetActive(false);
@@ -51,6 +53,7 @@ public class InventoryClothingButtons : MonoBehaviour
 
         if (gM.clothes.Contains(whatCloth)){
             if (thisDress.activeSelf == false){
+                Debug.Log($"wear {thisDress.name}");
                 gM.wearing.Add(whatCloth);
                 thisDress.SetActive(true);
                 thisGame.SetActive(true);

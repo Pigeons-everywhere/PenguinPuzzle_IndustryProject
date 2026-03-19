@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    
     public bool hasKey = false;
     public int lastLevelCompleted = 0;
     public string highestLevelReached = "MainMenu";

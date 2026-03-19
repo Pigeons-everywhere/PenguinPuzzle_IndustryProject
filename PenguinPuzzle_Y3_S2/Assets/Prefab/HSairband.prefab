@@ -182,7 +182,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1390574345870148016}
   - component: {fileID: 8369803459226607053}
-  - component: {fileID: 6542337058176849676}
   m_Layer: 0
   m_Name: HSairband
   m_TagString: Untagged
@@ -230,20 +229,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9526813, y: 1, z: 2.1535378}
   m_Center: {x: -0.0030332569, y: 0, z: -0.065222226}
---- !u!114 &6542337058176849676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6384535612174340430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09bf12ce3958bbe43b9d22b432c7d3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gM: {fileID: 0}
-  thisUI: {fileID: 0}
 --- !u!1 &8036147024256817456
 GameObject:
   m_ObjectHideFlags: 0

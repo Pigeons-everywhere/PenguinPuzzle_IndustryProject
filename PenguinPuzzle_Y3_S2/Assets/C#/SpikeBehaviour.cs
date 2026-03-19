@@ -44,7 +44,7 @@ public class SpikeBehaviour: MonoBehaviour
             foreach(GameObject doorO in doors){
                 doorO.SetActive(true);
             }
-            keyIcon.SetActive(false);
+            if (keyIcon!= null) keyIcon.SetActive(false);
 
             foreach(GameObject movingObject in platforms)
             {
