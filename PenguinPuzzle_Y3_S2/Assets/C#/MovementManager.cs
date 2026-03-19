@@ -4,6 +4,8 @@ public class MovementManager : MonoBehaviour
 {
     public CharacterMovement characterMovement;
     public IceSlideMovement iceSlideMovement;
+    public CameraControl cameraControl;
+    public CameraFollow cameraFollow;
     //public CameraControl cameraControl;
     private Animator anim;
 
@@ -17,6 +19,8 @@ public class MovementManager : MonoBehaviour
         anim = GetComponent<Animator>();
         characterMovement.enabled = true;
         iceSlideMovement.enabled = false;
+        cameraControl.enabled = true;
+        cameraFollow.enabled = false;
 
         audioMan = this.gameObject.GetComponent<PenguinAudio>();
     }
@@ -32,6 +36,8 @@ public class MovementManager : MonoBehaviour
 
         characterMovement.enabled = false;
         iceSlideMovement.enabled = true;
+        cameraControl.enabled = false;
+        cameraFollow.enabled = true;
         //keep the direction in normalwalk
         if (horizontalVelocity.sqrMagnitude > 0.1f)
         {
@@ -49,6 +55,8 @@ public class MovementManager : MonoBehaviour
 
         iceSlideMovement.enabled = false;
         characterMovement.enabled = true;
+        cameraControl.enabled = true;
+        cameraFollow.enabled = false;
 
         //iceSlideMovement.startSlide = false;
 
