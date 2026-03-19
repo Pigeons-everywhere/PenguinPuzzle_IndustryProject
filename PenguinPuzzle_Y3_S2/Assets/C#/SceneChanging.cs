@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class SceneChanging : MonoBehaviour
 {
-    [SerializeField] List<string> scenes = new List<string> {"MainMenu","Lvl1", "Lvl2","Lvl3","SampleScene","Map"};
+    [SerializeField] List<string> scenes = new List<string> {"01_Menu_Scene","Lvl1", "Lvl2","Lvl3","SampleScene","Map"};
     [SerializeField] GameObject gameManagerObj;
     GameManager gMan; //game manager script
-    GameObject censorBar;
+    public GameObject censorBar;
     private int sceneToGoTo;
+
+    [SerializeField]GameObject mMan;//elliots music object
 
     //starting/respawn positions of levels
     List<Vector3> respawns = new List<Vector3> {new Vector3(4f,11f,0f), new Vector3(0f,5f,0f)};
@@ -18,12 +20,13 @@ public class SceneChanging : MonoBehaviour
     private void Start() {
         gameManagerObj = GameObject.Find("GameManager");
         gMan = gameManagerObj.GetComponent<GameManager>();
+        mMan = GameObject.Find("MusicMan");
 
         if (SceneManager.GetActiveScene().name == "Map")
         {
             if(scenes.IndexOf(gMan.highestLevelReached) +1 >= Int32.Parse(gameObject.name))
             {
-                transform.GetChild(1).gameObject.SetActive(false);
+                censorBar.SetActive(false);
                 gameObject.GetComponent<Button>().enabled = true;
             }
         }
@@ -35,6 +38,7 @@ public class SceneChanging : MonoBehaviour
             if (scenes.IndexOf(gMan.highestLevelReached) < scenes.IndexOf(SceneManager.GetActiveScene().name))
             {
                 gMan.highestLevelReached = SceneManager.GetActiveScene().name;
+                gMan.lastLevelCompleted = scenes.IndexOf(SceneManager.GetActiveScene().name);
             }
             SceneManager.LoadScene(scenes[^1]);
         }
@@ -44,6 +48,7 @@ public class SceneChanging : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
+            Destroy(mMan);
             SceneManager.LoadScene(scenes[^1]);
         }
         else
