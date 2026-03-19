@@ -1224,6 +1224,7 @@ MonoBehaviour:
   - Map
   gameManagerObj: {fileID: 0}
   censorBar: {fileID: 0}
+  mMan: {fileID: 0}
 --- !u!136 &81514288
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -37886,15 +37887,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3767562335753724248, guid: 96793a8ac1a52034aaa5ff2cdb3b1452, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6
+      value: 49.16
       objectReference: {fileID: 0}
     - target: {fileID: 3767562335753724248, guid: 96793a8ac1a52034aaa5ff2cdb3b1452, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.3
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 3767562335753724248, guid: 96793a8ac1a52034aaa5ff2cdb3b1452, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.5
+      value: -41.78
       objectReference: {fileID: 0}
     - target: {fileID: 3767562335753724248, guid: 96793a8ac1a52034aaa5ff2cdb3b1452, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37923,6 +37924,18 @@ PrefabInstance:
     - target: {fileID: 3767562335753724248, guid: 96793a8ac1a52034aaa5ff2cdb3b1452, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834448068273394783, guid: 96793a8ac1a52034aaa5ff2cdb3b1452, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0165
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834448068273394783, guid: 96793a8ac1a52034aaa5ff2cdb3b1452, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0059
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637949724183561527, guid: 96793a8ac1a52034aaa5ff2cdb3b1452, type: 3}
+      propertyPath: m_Intensity
+      value: 3.35
       objectReference: {fileID: 0}
     - target: {fileID: 9060549095646860458, guid: 96793a8ac1a52034aaa5ff2cdb3b1452, type: 3}
       propertyPath: m_Name
@@ -37965,6 +37978,7 @@ MonoBehaviour:
   - Map
   gameManagerObj: {fileID: 0}
   censorBar: {fileID: 0}
+  mMan: {fileID: 0}
 --- !u!4 &3461309694118129553
 Transform:
   m_ObjectHideFlags: 0

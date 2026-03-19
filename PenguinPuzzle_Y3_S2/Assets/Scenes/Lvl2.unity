@@ -58481,7 +58481,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1390574345870148016, guid: 880bf3495ce017e4fa6e0fc095e8dd7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -99.84
+      value: -105.17
       objectReference: {fileID: 0}
     - target: {fileID: 1390574345870148016, guid: 880bf3495ce017e4fa6e0fc095e8dd7f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -58489,7 +58489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1390574345870148016, guid: 880bf3495ce017e4fa6e0fc095e8dd7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -89.87
+      value: -95.69
       objectReference: {fileID: 0}
     - target: {fileID: 1390574345870148016, guid: 880bf3495ce017e4fa6e0fc095e8dd7f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -60525,15 +60525,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2647769466303692990, guid: a9857b2df35858b4fbd95491aafaee31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.25
+      value: -117.47
       objectReference: {fileID: 0}
     - target: {fileID: 2647769466303692990, guid: a9857b2df35858b4fbd95491aafaee31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.04
+      value: 29.79
       objectReference: {fileID: 0}
     - target: {fileID: 2647769466303692990, guid: a9857b2df35858b4fbd95491aafaee31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -97.95
+      value: -135.15
       objectReference: {fileID: 0}
     - target: {fileID: 2647769466303692990, guid: a9857b2df35858b4fbd95491aafaee31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -60609,6 +60609,7 @@ MonoBehaviour:
   - Map
   gameManagerObj: {fileID: 0}
   censorBar: {fileID: 0}
+  mMan: {fileID: 0}
 --- !u!4 &5894540951855782086
 Transform:
   m_ObjectHideFlags: 0
