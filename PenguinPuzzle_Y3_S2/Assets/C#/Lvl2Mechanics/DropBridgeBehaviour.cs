@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class DropBridgeBehaviour : MonoBehaviour
 {
@@ -9,12 +10,21 @@ public class DropBridgeBehaviour : MonoBehaviour
     void Start()
     {
         thisAnim = this.gameObject.GetComponent<Animator>();
+        thisAnim.speed = 0f;
     }
 
     void Update()
     {
-        if (buttonsNeeded == buttonsPressed){
-            //thisAnim.Play;
+        if (buttonsNeeded == buttonsPressed)
+        {
+            StartCoroutine(PlayAnne());
         }
+    }
+
+    IEnumerator PlayAnne()
+    {
+        thisAnim.speed = 1;
+        yield return new WaitForSeconds(65f);
+        thisAnim.speed = 0;
     }
 }

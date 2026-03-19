@@ -19,11 +19,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BoxSides
   - Water
   - UI
   - Ground
-  - 
+  - Box
   - 
   - 
   - 
