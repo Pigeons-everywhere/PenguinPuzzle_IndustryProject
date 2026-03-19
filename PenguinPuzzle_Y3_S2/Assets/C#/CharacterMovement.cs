@@ -20,7 +20,7 @@ public class CharacterMovement : MonoBehaviour
     private InputAction hoverAction;
     private Animator anim;
 
-    bool swimming = false;
+    public bool swimming = false;
 
     //hovering speed
     public float hoverSpeed = 0.5f;
@@ -154,5 +154,12 @@ public class CharacterMovement : MonoBehaviour
             swimming = false;
             rb.linearDamping = 0f;
         }
+    }
+    public void ExitSwimming()
+    {
+        swimming = false;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        rb.linearDamping = 0f;
+        anim.SetBool("IsSwimming", false);
     }
 }

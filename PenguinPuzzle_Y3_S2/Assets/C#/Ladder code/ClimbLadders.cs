@@ -36,6 +36,11 @@ public class ClimbLadders : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Ladder")) return;
+
+        if (normalMovement.swimming)
+        {
+            normalMovement.ExitSwimming();
+        }
         //Debug.Log("in");
         isClimbing = true;
 
@@ -51,6 +56,7 @@ public class ClimbLadders : MonoBehaviour
     private void OnTriggerExit(Collider other) //Now for leave ladder at top
     {
         if (!other.CompareTag("Ladder")) return;
+
         ExitClimb();
         //Debug.Log("leave");
         /*
@@ -68,7 +74,7 @@ public class ClimbLadders : MonoBehaviour
         isClimbing = false;
         rb.useGravity = true;
         rb.linearVelocity = Vector3.zero;
-        //rb.constraints = RigidbodyConstraints.None;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         normalMovement.enabled = true;
     }
-}
+}   
