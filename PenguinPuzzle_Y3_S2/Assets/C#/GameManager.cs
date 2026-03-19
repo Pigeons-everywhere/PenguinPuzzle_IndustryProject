@@ -23,23 +23,13 @@ public class GameManager : MonoBehaviour
 
     public bool endFan = false;
 
-private void Awake() 
-{ 
-    // If there is an instance, and it's not me, delete myself.
-    
-    if (Instance != null && Instance != this) 
-    { 
-        Destroy(this); 
-    } 
-    else 
-    { 
-        Instance = this; 
-    } 
-}
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // If there is an instance, and it's not me, delete myself.
+        if (Instance != null && Instance != this) Destroy(this); 
+        else Instance = this;
+
         DontDestroyOnLoad(this.gameObject);
     }
 }
