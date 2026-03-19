@@ -9,7 +9,7 @@ public class CameraControl : MonoBehaviour
 
     [SerializeField]
     public float distance = 20f;
-    public float pitch = 45f;
+    public float height = 45f;
     public float rotateSpeed = 120f;
 
     float yAngle;
@@ -44,7 +44,7 @@ public class CameraControl : MonoBehaviour
 
         Vector3 center = target.position + targetOffset;
 
-        Quaternion rotation = Quaternion.Euler(pitch, yAngle, 0f);
+        Quaternion rotation = Quaternion.Euler(height, yAngle, 0f);
 
         Vector3 direction = rotation * Vector3.forward;
         Vector3 cameraPosition = center - direction * distance;
