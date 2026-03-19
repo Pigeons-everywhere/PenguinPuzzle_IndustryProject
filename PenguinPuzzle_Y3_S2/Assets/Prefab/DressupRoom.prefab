@@ -655,7 +655,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Headband
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6542337058176849676, guid: 880bf3495ce017e4fa6e0fc095e8dd7f, type: 3}
+    - {fileID: 8369803459226607053, guid: 880bf3495ce017e4fa6e0fc095e8dd7f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -735,6 +737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5701906725912399843, guid: 4f860c9f2bde24c4483ce64906086208, type: 3}
+    - {fileID: 2218990208603786591, guid: 4f860c9f2bde24c4483ce64906086208, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4714783665772305754, guid: 4f860c9f2bde24c4483ce64906086208, type: 3}
     m_AddedGameObjects: []
