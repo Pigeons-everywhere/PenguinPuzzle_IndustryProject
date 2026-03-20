@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class HideOnStart : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gameObject.SetActive(false);
+        Invoke(nameof(Show), 3f);
+    }
+
+    void Show()
+    {
+        gameObject.SetActive(true);
     }
 }

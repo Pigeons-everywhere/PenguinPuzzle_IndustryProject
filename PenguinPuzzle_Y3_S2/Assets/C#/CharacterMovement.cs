@@ -20,7 +20,7 @@ public class CharacterMovement : MonoBehaviour
     private InputAction hoverAction;
     private Animator anim;
 
-    bool swimming = false;
+    public bool swimming = false;
 
     //hovering speed
     public float hoverSpeed = 0.5f;
@@ -130,6 +130,10 @@ public class CharacterMovement : MonoBehaviour
         BoxController box = push.collider.GetComponent<BoxController>();
         if (box != null)
         {
+            float boxTop = box.GetComponent<Collider>().bounds.max.y;
+            float penguinBottom = transform.position.y - GetComponent<Collider>().bounds.extents.y;
+            if (penguinBottom > boxTop - 1f) return;
+
             Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
             if (moveDirection.sqrMagnitude > 0)
             {
@@ -154,5 +158,12 @@ public class CharacterMovement : MonoBehaviour
             swimming = false;
             rb.linearDamping = 0f;
         }
+    }
+    public void ExitSwimming()
+    {
+        swimming = false;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        rb.linearDamping = 0f;
+        anim.SetBool("IsSwimming", false);
     }
 }

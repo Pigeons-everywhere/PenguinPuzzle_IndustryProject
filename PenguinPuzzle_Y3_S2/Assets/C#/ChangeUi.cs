@@ -13,7 +13,7 @@ public class ChangeUi : MonoBehaviour
     [SerializeField]
     private Sprite buttonIcon;
 
-    void Start()
+    /*void Start()
     {
         ShowQuestionIcon();
     }
@@ -34,5 +34,5 @@ public class ChangeUi : MonoBehaviour
     private void ShowButtonIcon()
     {
         iconImage.sprite = buttonIcon;
-    }
+    }*/
 }

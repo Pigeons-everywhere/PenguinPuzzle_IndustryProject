@@ -15,6 +15,7 @@ public class ClimbLadders : MonoBehaviour
     private InputAction moveAction;
 
     public bool isClimbing = false;
+    private Animator anim;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class ClimbLadders : MonoBehaviour
         inputActions = new PlayerInputActions();
         moveAction = inputActions.Player.Move;
         inputActions.Enable();
+        anim = GetComponent<Animator>();
     }
     void FixedUpdate()
     {
@@ -36,16 +38,17 @@ public class ClimbLadders : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Ladder")) return;
-        //Debug.Log("in");
+        if (normalMovement.swimming)
+        {
+            normalMovement.ExitSwimming();
+        }
         isClimbing = true;
 
         normalMovement.enabled = false;
         rb.useGravity = false;
         rb.linearVelocity = Vector3.zero;
+        anim.SetBool("IsClimbing", true);
 
-       // rb.constraints = RigidbodyConstraints.FreezeRotation |
-                         //RigidbodyConstraints.FreezePositionX |
-                         //RigidbodyConstraints.FreezePositionZ;
     }
     
     private void OnTriggerExit(Collider other) //Now for leave ladder at top
@@ -68,7 +71,8 @@ public class ClimbLadders : MonoBehaviour
         isClimbing = false;
         rb.useGravity = true;
         rb.linearVelocity = Vector3.zero;
-        //rb.constraints = RigidbodyConstraints.None;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         normalMovement.enabled = true;
+        anim.SetBool("IsClimbing", false);
     }
 }

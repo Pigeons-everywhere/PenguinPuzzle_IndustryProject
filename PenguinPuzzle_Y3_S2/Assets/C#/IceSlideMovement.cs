@@ -51,8 +51,11 @@ public class IceSlideMovement : MonoBehaviour
     {
         Vector2 inputValue = moveAction.ReadValue<Vector2>();
 
+        rb.angularVelocity = Vector3.zero;
         float slideRotation = inputValue.x * turnSpeed * Time.fixedDeltaTime;
-        transform.Rotate( 0f, slideRotation, 0f);
+        //transform.Rotate( 0f, slideRotation, 0f);
+        Quaternion deltaTimeRotation = Quaternion.Euler(0f, slideRotation, 0f);
+        rb.MoveRotation(rb.rotation * deltaTimeRotation);
 
         Vector3 slideDir = transform.forward * inputValue.y * moveSpeed;
         rb.AddForce(slideDir, ForceMode.Force);
