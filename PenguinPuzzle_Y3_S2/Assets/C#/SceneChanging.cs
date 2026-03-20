@@ -35,6 +35,13 @@ public class SceneChanging : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.tag == "Penguin")
         {
+            if (SceneManager.GetActiveScene().name == "Lvl2")
+            {
+                Destroy(gMan);
+                Destroy(mMan);
+                SceneManager.LoadScene("01_Menu_Scene");
+            }
+
             if (scenes.IndexOf(gMan.highestLevelReached) < scenes.IndexOf(SceneManager.GetActiveScene().name))
             {
                 gMan.highestLevelReached = SceneManager.GetActiveScene().name;
@@ -46,11 +53,12 @@ public class SceneChanging : MonoBehaviour
 
     public void ChangeScene()
     {
-        if (SceneManager.GetActiveScene().name == "MainMenu")
+        if (SceneManager.GetActiveScene().name == "01_Menu_Scene")
         {
             Destroy(mMan);
             SceneManager.LoadScene(scenes[^1]);
         }
+
         else
         {
             sceneToGoTo = Int32.Parse(gameObject.name);
