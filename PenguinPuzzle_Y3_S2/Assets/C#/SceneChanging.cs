@@ -42,12 +42,16 @@ public class SceneChanging : MonoBehaviour
                 SceneManager.LoadScene("01_Menu_Scene");
             }
 
-            if (scenes.IndexOf(gMan.highestLevelReached) < scenes.IndexOf(SceneManager.GetActiveScene().name))
+            else
             {
-                gMan.highestLevelReached = SceneManager.GetActiveScene().name;
-                gMan.lastLevelCompleted = scenes.IndexOf(SceneManager.GetActiveScene().name);
+                if (scenes.IndexOf(gMan.highestLevelReached) < scenes.IndexOf(SceneManager.GetActiveScene().name))
+                {
+                    gMan.highestLevelReached = SceneManager.GetActiveScene().name;
+                    gMan.lastLevelCompleted = scenes.IndexOf(SceneManager.GetActiveScene().name);
+                }
+                SceneManager.LoadScene(scenes[^1]);
             }
-            SceneManager.LoadScene(scenes[^1]);
+            
         }
     }
 
