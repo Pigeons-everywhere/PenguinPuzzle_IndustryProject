@@ -55,13 +55,6 @@ public class ClimbLadders : MonoBehaviour
     {
         if (!other.CompareTag("Ladder")) return;
         ExitClimb();
-        //Debug.Log("leave");
-        /*
-        isClimbing = false;
-        rb.useGravity = true;
-        rb.linearVelocity = Vector3.zero;
-        normalMovement.enabled = true;
-        */
     }
 
     public void ExitClimb() 

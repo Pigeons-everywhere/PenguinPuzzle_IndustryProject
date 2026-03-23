@@ -47,13 +47,12 @@ public class IceSlideMovement : MonoBehaviour
         audioMan = this.gameObject.GetComponent<PenguinAudio>();
     }
 
-    void FixedUpdate()
+    void FixedUpdate()  
     {
         Vector2 inputValue = moveAction.ReadValue<Vector2>();
 
         rb.angularVelocity = Vector3.zero;
         float slideRotation = inputValue.x * turnSpeed * Time.fixedDeltaTime;
-        //transform.Rotate( 0f, slideRotation, 0f);
         Quaternion deltaTimeRotation = Quaternion.Euler(0f, slideRotation, 0f);
         rb.MoveRotation(rb.rotation * deltaTimeRotation);
 
@@ -67,36 +66,6 @@ public class IceSlideMovement : MonoBehaviour
             Vector3 KeepV = slideV.normalized * maxSpeed;
             rb.linearVelocity = new Vector3(KeepV.x, rb.linearVelocity.y, KeepV.z);
         }
-        /*if (!startSlide && inputValue.y > 0.1f)
-        {
-            startSlide = true;
-        }
-
-        float moveForward, rotation;
-        float forwardInput = 0f;
-
-        rotation = inputValue.x * turnSpeed * Time.fixedDeltaTime;
-
-        if (startSlide)
-        {
-            forwardInput = 1f;
-        }
-
-        moveForward = forwardInput * moveSpeed;
-
-        //Ignore Y-axis acceleration
-        Vector3 v = rb.linearVelocity;
-        Vector3 flatV = new Vector3(v.x, 0f, v.z);
-
-        if (flatV.magnitude < maxSpeed)
-        {
-            rb.AddRelativeForce(Vector3.forward * moveForward);
-        }
-
-        Quaternion turn = Quaternion.Euler(0f, rotation, 0f);
-
-        rb.MoveRotation(rb.rotation * turn);*/
-
 
         anim.SetFloat("VY", rb.linearVelocity.y);
 

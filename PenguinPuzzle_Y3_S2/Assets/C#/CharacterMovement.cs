@@ -134,7 +134,8 @@ public class CharacterMovement : MonoBehaviour
             float penguinBottom = transform.position.y - GetComponent<Collider>().bounds.extents.y;
             if (penguinBottom > boxTop - 1f) return;
 
-            Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+            Vector2 inputValue = moveAction.ReadValue<Vector2>();
+            Vector3 moveDirection = new Vector3(inputValue.x, 0, inputValue.y);
             if (moveDirection.sqrMagnitude > 0)
             {
                 Vector3 pushDirection = box.transform.position - transform.position;
